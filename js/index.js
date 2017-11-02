@@ -4,11 +4,8 @@ $(document).ready(function(){
 		let loginEmailField = $("#loginEmailField").val();
 		let loginPasswordField = $("#loginPasswordField").val();
 
-		console.log("loginEmailField: " + loginEmailField);
-		console.log("loginPasswordField: " + loginPasswordField);
-
-		// if email and password are both provided
-		if(loginEmailField != "" && loginPasswordField != ""){
+		// if email and password are both provided and email field is a valid email
+		if(loginEmailField != "" && isEmail(loginEmailField) && loginPasswordField != ""){
 			window.location = "html/homepage.html";
 		}
 		// all mandatory fields are not filled in
@@ -18,6 +15,12 @@ $(document).ready(function(){
 				$("#emailFieldSection").addClass("has-error");
 				// Error message
 				$("#loginFieldError").text("Please provide your account's email");
+			}
+			// Invalid email address given
+			else if(!isEmail(loginEmailField)){
+				$("#emailFieldSection").addClass("has-error");
+				// Error message
+				$("#loginFieldError").text("Please provide a valid email address");				
 			}
 			// Email field provided
 			else{
@@ -37,3 +40,9 @@ $(document).ready(function(){
 		}
 	});
 });
+
+// Given a String, will determind if String is an email address
+function isEmail(email){
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);	
+}
