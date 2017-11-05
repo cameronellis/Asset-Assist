@@ -19,8 +19,8 @@ $(document).ready(function(){
 		let itemManufacturerField = $("#itemManufacturerField").val();
 
 		// check if all mandatory forms are filled in...
-		if(itemNameField != "" && itemPriceField != "" && itemYearField != "" 
-			&& itemPictureField != "" && itemReceiptField != "" && itemManufacturerField != ""){
+		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
+			&& itemPictureField !== "" && itemReceiptField !== "" && itemManufacturerField !== ""){
 			// go to confirmation page
 			window.location = "insertNewAssetConfirmation.html";
 
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		// All fields not filled in, highlight which ones are and which ones are not
 		else{
 			// If an item name is not given
-			if(itemNameField == ""){
+			if(itemNameField === ""){
 				// Give input box a red border
 				$("#itemNameSection").addClass("has-error");
 				// Error Message
@@ -39,7 +39,7 @@ $(document).ready(function(){
 			}
 
 			// if an item price is not given
-			if(itemPriceField == ""){
+			if(itemPriceField === ""){
 				// Give input box a red border
 				$('#itemPriceSection').addClass("has-error");
 				// Error message
@@ -58,7 +58,7 @@ $(document).ready(function(){
 			}
 
 			// if an item year is not given
-			if(itemYearField == ""){
+			if(itemYearField === ""){
 				// give input box a red border
 				$('#itemYearSection').addClass("has-error");
 				// Error message
@@ -69,7 +69,7 @@ $(document).ready(function(){
 			}
 
 			// if a picture of the item is not given
-			if(itemPictureField == ""){
+			if(itemPictureField === ""){
 				// give input box a red border
 				$('#itemPictureSection').addClass("has-error");
 				// Error message
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			}
 
 			// Please provide a receipt of the item
-			if(itemReceiptField == ""){
+			if(itemReceiptField === ""){
 				// give input box a red border
 				$("#itemReceiptSection").addClass("has-error");
 				// Error message
@@ -92,7 +92,7 @@ $(document).ready(function(){
 				$("#itemReceiptSection").addClass("has-success");
 			}
 
-			if(itemManufacturerField == ""){
+			if(itemManufacturerField === ""){
 				// give input box a red border
 				$("#itemManufacturerSection").addClass("has-error");
 				// Error message

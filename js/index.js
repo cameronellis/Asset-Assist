@@ -5,13 +5,13 @@ $(document).ready(function(){
 		let loginPasswordField = $("#loginPasswordField").val();
 
 		// if email and password are both provided and email field is a valid email
-		if(loginEmailField != "" && isEmail(loginEmailField) && loginPasswordField != ""){
+		if(loginEmailField !== "" && isEmail(loginEmailField) && loginPasswordField !== ""){
 			window.location = "html/homepage.html";
 		}
 		// all mandatory fields are not filled in
 		else{
 			// Email field not provided
-			if(loginEmailField == ""){
+			if(loginEmailField === ""){
 				$("#emailFieldSection").addClass("has-error");
 				// Error message
 				$("#loginFieldError").text("Please provide your account's email");
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			}
 
 			// Password field not provided
-			if(loginPasswordField == ""){
+			if(loginPasswordField === ""){
 				$("#passwordFieldSection").addClass("has-error");
 				// Error message
 				$("#passwordFieldError").text("Please provide your account's password");

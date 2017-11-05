@@ -5,10 +5,10 @@ $(document).ready(function(){
         let inputEmailField = $("#inputEmailField").val();
 
 
-        if(inputEmailField != ""){
+        if(inputEmailField !== ""){
             window.location = "passwordResetConfirmation.html";
         }
-        else if(inputEmailField == ""){
+        else if(inputEmailField === ""){
             $("#emailFieldSection").addClass("has-error");
             // Error message
             $("#emailFieldError").text("Please provide an email address");
