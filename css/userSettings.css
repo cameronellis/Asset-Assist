@@ -1,3 +1,9 @@
+ /* Give each icon spacing */
+.icon {
+  margin-right: 5px;
+}
+
+/* Make each input field have a thicker border */
 .form-control {
 	border: 2px solid black;	
 }
