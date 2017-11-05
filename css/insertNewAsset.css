@@ -6,3 +6,7 @@
 .input-group-addon {
 	border: 2px solid black;	
 }
+/* Give each icon in the navigation menu spacing */
+.icon {
+  margin-right: 10px;
+}
