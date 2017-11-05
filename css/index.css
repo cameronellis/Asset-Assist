@@ -1,0 +1,9 @@
+/* Make the email field have a bolder border */
+#loginEmailField {
+	border: 2px solid black;	
+}
+
+/* Make the password field have a bolder border */
+#loginPasswordField {
+	border: 2px solid black;	
+}
