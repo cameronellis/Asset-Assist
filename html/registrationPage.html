@@ -13,31 +13,50 @@
 
 	<div class="container">		
 		<div class="page-header">
-			<h1>Create New Account</h1>
+			<h1>Create A New Account</h1>
 		</div>
 		
 		<a class="btn-lg btn-success" href="../index.html"> Back</a>
 
 		<br></br>
-		<label>First Name</label>
-		<input class="form-control input-lg"></input>
 
-		<label>Last Name</label>
-		<input class="form-control input-lg"></input>
+		<div id="firstNameSection">
+			<h2>First Name</h2>
+			<input id="firstNameField" class="form-control input-lg"></input>
+			<span class="help-block" id="firstNameError"></span>
+		</div>
 
-		<label>Email</label>
-		<input class="form-control input-lg"></input>
+		<div id="lastNameSection">	
+			<h2>Last Name</h2>
+			<input id="lastNameField" class="form-control input-lg"></input>
+			<span class="help-block" id="lastNameError"></span>
+		</div>
 
-		<label>Password</label>
-		<input type="password" class="form-control input-lg"></input>
+		<div id="emailSection">	
+			<h2>Email</h2>
+			<input id="emailField" class="form-control input-lg"></input>
+			<span class="help-block" id="emailError"></span>
+		</div>
 
-		<label>Confirm Password</label>
-		<input type="password" class="form-control input-lg"></input>
+		<div id="passwordSection">	
+			<h2>Password</h2>
+			<input id="passwordField" type="password" class="form-control input-lg"></input>
+			<span class="help-block" id="passwordError"></span>
+		</div>
+
+		<div id="confirmPasswordSection">
+			<h2>Confirm Password</h2>
+			<input id="confirmPasswordField" type="password" class="form-control input-lg"></input>
+			<span class="help-block" id="confirmPasswordError"></span>
+		</div>
 
 		<br></br>
 
-		<a class="btn-lg btn-success" href="accountCreationConfirmation.html">Register</a>
+		<a id="registrationButton" class="btn-lg btn-success">Register</a>
+		<br></br>
 	</div>
+
+	<script src="../js/registrationPage.js"></script>
 
 </body>
 </html>
