@@ -1,3 +1,7 @@
+/* Outline all input form boxes black*/
+.form-control {
+border: 2px solid black;
+}
  /* Give each icon spacing */
 .icon {
   margin-right: 10px;
