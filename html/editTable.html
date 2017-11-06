@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom CSS -->
+  <link href="../css/style.css" type="text/css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -41,26 +43,27 @@
     <h1>Edit</h1>
 
     <form>
-      <p>Item Name:</p>
-      <input type="text" name="itemName" value="Table">
-      <p>Price $:</p>
-      <input type="text" name="itemPrice" value="400">
-      <p>Year of Purchase:</p>
-      <input type="text" name="yearOfPurchase" value="2010">
+      <h2>Item Name</h2>
+      <input type="text" class="form-control input-lg" name="itemName" value="Table">
+      <h2>Price </h2>
+      <div class="input-group">
+        <div class="input-group-addon">$</div>
+        <input type="text" class="form-control input-lg" id="itemPrice" value="400"></input>
+      </div>
+      <h2>Year of Purchase</h2>
+      <select class="form-control input-lg" id="yearOfPurchase" value="2010"></select>
     </form>
 
-    <p>Picture of Item</p>
+    <h2>Picture of Item</h2>
 
     <div class="itemImage" id="itemImage">
-        <p>Item Image</p>
         <img src="https://images2.roomstogo.com/is/image/roomstogo/dr_tbl_42193502_riverdale_leg~Riverdale-Cherry-Rectangle-Dining-Table.jpeg?$PDP_Primary_936x650$"
           width="200" height="200" alt="Item image" class="img" />
     </div>
 
-    <p>Picture of Receipt</p>
+    <h2>Picture of Receipt</h2>
 
     <div class="receiptImage" id="receiptImage">
-        <p>Receipt Image</p>
         <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
         width="200" height="200" alt"Receipt image" class="img" />
     </div>
@@ -69,14 +72,17 @@
 
     <form>
       <p>Manufacturer</p>
-    <input type="text" name="manufacturer" value="Ikea">
+    <input type="text" class="form-control input-lg"name="manufacturer" value="Ikea">
     </form>
 
     <p>Misc. Notes</p>
       <form action="./searchResults.html">
-        <textarea name="notes" rows="10" cols="30"> </textarea>
+        <textarea name="notes" class="form-control input-lg" rows="10" cols="30"> </textarea>
       </form>
-        <a class="btn btn-success" href="itemEditedConfirmation.html">Submit</a>
+
+        <br><br>
+        <a class="btn-lg btn-success" href="itemEditedConfirmation.html">Submit</a>
     </div>
+    <script src="../js/editTable.js"></script>
   </body>
 </html>
