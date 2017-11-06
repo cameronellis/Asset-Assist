@@ -3,7 +3,7 @@ let start = new Date().getFullYear();
 let end = 1900;
 let options = "<option></option>";
 for(let year = start ; year >=end; year--){
-  if(year != 2002) {
+  if(year != 2010) {
     options += "<option>"+ year +"</option>";
   }
   // makes year selected default 2003
