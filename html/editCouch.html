@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Custom CSS -->
+  <link href="../css/style.css" type="text/css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -41,12 +43,16 @@
     <h1>Edit</h1>
 
     <form>
-      <h2>Item Name:</h2>
-      <input type="text" class="input-lg" name="itemName" value="Couch">
-      <h2>Price $:</h2>
-      <input type="text" class="input-lg" name="itemPrice" value="1200">
-      <h2>Year of Purchase:</h2>
-      <input type="text" class="input-lg" name="yearOfPurchase" value="2003">
+      <h2>Item Name</h2>
+      <input type="text" class="form-control input-lg" name="itemName" value="Couch">
+      <h2>Price </h2>
+      <div class="input-group">
+        <div class="input-group-addon">$</div>
+        <input type="text" class="form-control input-lg" id="itemPrice" value="1200"></input>
+      </div>
+      <h2>Year of Purchase</h2>
+      <select class="form-control input-lg" id="yearOfPurchase" value="2003"></select>
+      <option selected="selected"> 2003 </option>
     </form>
 
     <h2>Picture of Item</h2>
@@ -69,14 +75,18 @@
 
     <form>
       <h2>Manufacturer</h2>
-    <input type="text" class= "input-lg" name="manufacturer" value="Ikea">
+    <input type="text" class= "form-control input-lg" name="manufacturer" value="Ikea">
     </form>
 
     <h2>Misc. Notes</h2>
       <form action="./searchResults.html">
-        <textarea name="notes" class="input-lg" rows="10" cols="30"> </textarea>
+        <textarea name="notes" class="form-control input-lg" rows="10" cols="30"> </textarea>
       </form>
-        <a class="btn-lg btn-success" href="itemEditedConfirmation.html">Submit</a>
+
+      <br><br>
+      <a class="btn-lg btn-success" href="itemEditedConfirmation.html">Submit</a>
     </div>
+
+    <script src="../js/editCouch.js"></script>
   </body>
 </html>
