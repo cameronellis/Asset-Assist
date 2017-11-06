@@ -3,12 +3,48 @@ $(document).ready(function(){
 	$("#signInButton").click(function(){
 		let loginEmailField = $("#loginEmailField").val();
 		let loginPasswordField = $("#loginPasswordField").val();
+		let wrongPassword = false;
+		let emailDoesNotExist = false;
 
-		// if email and password are both provided and email field is a valid email
-		if(loginEmailField !== "" && isEmail(loginEmailField) && loginPasswordField !== ""){
+		let userAccounts = [	["cameron@gmail.com","cameron"],
+								["fernando@gmail.com","fernando"],
+								["mary@yahoo.com","mary"],
+								["dean@hotmail.com","dean"]
+							];
+
+		function isValidEmailAccount(email, password){
+			for(let i = 0; i < userAccounts.length; i++){
+				// valid email account - allow to proceed to next page
+				if(email === userAccounts[i][0] && password === userAccounts[i][1]){
+					return true;
+				}
+				// valid email exists - wrong password given
+				else if(email === userAccounts[i][0] && password !== userAccounts[i][1]){
+					wrongPassword = true;
+					return false;
+				}
+			}
+			// email account does not exist
+			emailDoesNotExist = true;
+			return false;
+		}
+
+		// console.log(isValidEmailAccount(loginEmailField, loginPasswordField));
+		
+		// Given a String, will determind if String is an email address
+		function isEmail(email){
+		  let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		  return regex.test(email);	
+		}
+
+		// The user is allowed to log in
+		if( loginEmailField !== "" 
+			&& loginPasswordField !== "" 
+			&& isEmail(loginEmailField) 
+			&& isValidEmailAccount(loginEmailField, loginPasswordField)){
 			window.location = "html/homepage.html";
 		}
-		// all mandatory fields are not filled in
+		// The user is not allowed to log in
 		else{
 			// Email field not provided
 			if(loginEmailField === ""){
@@ -37,12 +73,19 @@ $(document).ready(function(){
 			else{
 				$("#passwordFieldSection").addClass("has-success");
 			}
+
+			if(wrongPassword){
+				$("#passwordFieldSection").addClass("has-error");
+				// Error message
+				$("#passwordFieldError").text("Incorrect password given for this account");
+			}
+
+			if(emailDoesNotExist){
+				$("#emailFieldSection").addClass("has-error");
+				// Error message
+				$("#loginFieldError").text("An account does not exist for this email");				
+			}
 		}
 	});
 });
 
-// Given a String, will determind if String is an email address
-function isEmail(email){
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);	
-}
