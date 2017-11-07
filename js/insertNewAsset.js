@@ -17,10 +17,28 @@ $(document).ready(function(){
 		let itemPictureField = $("#itemPictureField").val();
 		let itemReceiptField = $("#itemReceiptField").val();
 		let itemManufacturerField = $("#itemManufacturerField").val();
+		let itemMiscNotesField = $("#itemMiscNotesField").val();
+
+		// console.log("itemMiscNotesField: " + itemMiscNotesField);
 
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
 			&& itemPictureField !== "" && itemReceiptField !== "" && itemManufacturerField !== ""){
+			
+			// retrieve Howard's list of assets from localStorage
+			let listOfAssets = JSON.parse(localStorage.getItem("howard@gmail.com"));
+			// insert the new asset into list of assets
+			listOfAssets.push(	{	"itemName": itemNameField,
+									"itemPrice": itemPriceField,
+									"itemYear": itemYearField,
+									"itemPicture": itemPictureField,
+									"itemReceipt": itemReceiptField,
+									"itemManufacturer": itemManufacturerField,
+									"itemMiscNotes": itemMiscNotesField
+								});
+			// insert updated list into localStorage
+			localStorage.setItem("howard@gmail.com", JSON.stringify(listOfAssets));
+			
 			// go to confirmation page
 			window.location = "insertNewAssetConfirmation.html";
 
