@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	// when the sign in button is clicked
 	$("#signInButton").click(function(){
 		let loginEmailField = $("#loginEmailField").val();
@@ -9,7 +10,8 @@ $(document).ready(function(){
 		let userAccounts = [	["cameron@gmail.com","cameron"],
 								["fernando@gmail.com","fernando"],
 								["mary@yahoo.com","mary"],
-								["dean@hotmail.com","dean"]
+								["dean@hotmail.com","dean"],
+								["howard@gmail.com", "howard"]
 							];
 
 		function isValidEmailAccount(email, password){
@@ -28,8 +30,6 @@ $(document).ready(function(){
 			emailDoesNotExist = true;
 			return false;
 		}
-
-		// console.log(isValidEmailAccount(loginEmailField, loginPasswordField));
 		
 		// Given a String, will determind if String is an email address
 		function isEmail(email){
@@ -41,7 +41,8 @@ $(document).ready(function(){
 		if( loginEmailField !== "" 
 			&& loginPasswordField !== "" 
 			&& isEmail(loginEmailField) 
-			&& isValidEmailAccount(loginEmailField, loginPasswordField)){
+			&& isValidEmailAccount(loginEmailField, loginPasswordField))
+		{
 			window.location = "html/homepage.html";
 		}
 		// The user is not allowed to log in
@@ -88,4 +89,3 @@ $(document).ready(function(){
 		}
 	});
 });
-
