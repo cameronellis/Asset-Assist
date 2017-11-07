@@ -43,6 +43,7 @@ $(document).ready(function(){
 			&& isEmail(loginEmailField) 
 			&& isValidEmailAccount(loginEmailField, loginPasswordField))
 		{
+			localStorage.setItem("howard@gmail.com", JSON.stringify([]));
 			window.location = "html/homepage.html";
 		}
 		// The user is not allowed to log in
