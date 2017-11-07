@@ -8,6 +8,12 @@ for(let year = start ; year >=end; year--){
 }
 document.getElementById("year").innerHTML = options;
 
+// Navigate away warning on incomplete form when the user clicks the back button
+// in their browser or when the user tries to close the window
+window.onbeforeunload = function(){
+	return "leaving this page will reset the fields";
+}
+
 $(document).ready(function(){
 	// When the submit button is clicked
 	$("#submitButton").click(function(){
@@ -18,8 +24,6 @@ $(document).ready(function(){
 		let itemReceiptField = $("#itemReceiptField").val();
 		let itemManufacturerField = $("#itemManufacturerField").val();
 		let itemMiscNotesField = $("#itemMiscNotesField").val();
-
-		// console.log("itemMiscNotesField: " + itemMiscNotesField);
 
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
