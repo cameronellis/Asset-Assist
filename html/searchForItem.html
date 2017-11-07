@@ -44,12 +44,14 @@
 
     <h1>Search for Item</h1>
 
-    <form action="./searchResults.html">
+  <div id="searchNameSection">
       <h2>Search by Name</h2>
-      <input type="text" class="form-control input-lg" name="itemName">
-      <br><br>
-      <a class="btn-lg btn-success" href="searchResults.html">Submit</a>
-    </form>
+      <input id="searchName" class="form-control input-lg"></input>
+      <span class="help-block" id="searchNameError"></span>
+  </div>
+
+  <a class="btn-lg btn-success" id="searchButton">Search</a>
+
 
     <h3><a href="./advancedSearch.html">Advanced Search</a></h3>
     <h2>Recent Searches</h2>
@@ -72,6 +74,8 @@
       </a>
     </div>
   </div>
+
+  <script src="../js/searchForItem.js"></script>
 
 </body>
 </html>
