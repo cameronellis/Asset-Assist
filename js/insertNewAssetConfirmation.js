@@ -28,5 +28,6 @@ $(document).ready(function(){
 	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
 	$("#itemYear").text(assetToDisplay.itemYear);
 	$("#itemManufacturer").text(assetToDisplay.itemManufacturer);
+	$("#itemMiscDetails").text(assetToDisplay.itemMiscNotes);
 
 });
