@@ -18,11 +18,12 @@ for (i = 0; i < acc.length; i++) {
 
 // localStorage - retrieve information from it and populate fields
 $(document).ready(function(){
+	let currentUser = localStorage.getItem("currentlyLoggedInAs");
 	// retrieve list of assets for the user
-	let assets = JSON.parse(localStorage.getItem("howard@gmail.com"));
-	// the last element in the list is the last element to have been inserted
-	let assetToDisplay = assets[assets.length - 1];
-	
+	let usersAssets = JSON.parse(localStorage.getItem(currentUser + "_assets"));
+	// the last element in the list is the latest element to have been inserted
+	let assetToDisplay = usersAssets[usersAssets.length - 1];
+
 	// Display content in its respective place in the page
 	$("#itemName").text(assetToDisplay.itemName);
 	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
