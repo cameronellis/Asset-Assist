@@ -37,13 +37,40 @@ $(document).ready(function(){
 		  return regex.test(email);	
 		}
 
+		function initializeUserData(email){
+			let person = {};
+			
+			// determine who is logging in
+			if(email === "cameron@gmail.com"){
+				person = {fName:"Cameron", lName:"Ellis", email:"cameron@gmail.com", password:"cameron"};
+			}
+			if(email === "fernando@gmail.com"){
+				person = {fName:"Fernando", lName:"Cortez", email:"fernando@gmail.com", password:"fernando"};
+			}
+			if(email === "mary@yahoo.com"){
+				person = {fName:"Mary", lName:"Doggett", email:"mary@yahoo.com", password:"mary"};
+			}
+			if(email === "dean@howmail.com"){
+				person = {fName:"Dean", lName:"Ravida", email:"dean@hotmail.com", password:"dean"};
+			}
+			if(email === "howard@gmail.com"){
+				person = {fName:"Howard", lName:"Schlottmann", email:"howard@gmail.com", password:"howard"};
+			}
+
+			localStorage.setItem(email + "_userdata", JSON.stringify(person));
+			localStorage.setItem(email + "_assets"  , JSON.stringify([]));
+		}
+
 		// The user is allowed to log in
 		if( loginEmailField !== "" 
 			&& loginPasswordField !== "" 
 			&& isEmail(loginEmailField) 
 			&& isValidEmailAccount(loginEmailField, loginPasswordField))
 		{
-			localStorage.setItem("howard@gmail.com", JSON.stringify([]));
+			// indicate who is logging in
+			localStorage.setItem("currentlyLoggedInAs", loginEmailField);
+			// initialize data for this user
+			initializeUserData(loginEmailField);
 			window.location = "html/homepage.html";
 		}
 		// The user is not allowed to log in
