@@ -29,10 +29,13 @@ $(document).ready(function(){
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
 			&& itemPictureField !== "" && itemReceiptField !== "" && itemManufacturerField !== ""){
 			
-			// retrieve Howard's list of assets from localStorage
-			let listOfAssets = JSON.parse(localStorage.getItem("howard@gmail.com"));
+			// retrieve users's list of assets from localStorage
+			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+			let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
+
 			// insert the new asset into list of assets
-			listOfAssets.push(	{	"itemName": itemNameField,
+			usersAssets.push(	{	
+									"itemName": itemNameField,
 									"itemPrice": itemPriceField,
 									"itemYear": itemYearField,
 									"itemPicture": itemPictureField,
@@ -40,8 +43,9 @@ $(document).ready(function(){
 									"itemManufacturer": itemManufacturerField,
 									"itemMiscNotes": itemMiscNotesField
 								});
+			
 			// insert updated list into localStorage
-			localStorage.setItem("howard@gmail.com", JSON.stringify(listOfAssets));
+			localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
 			
 			// go to confirmation page
 			window.location = "insertNewAssetConfirmation.html";
