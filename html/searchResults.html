@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Import style -->
-  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link href="../css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,42 +33,54 @@
                   <li><a href="searchForItem.html">Search for Item</a></li>
               </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+              <li><a href="#">            <span class="glyphicon glyphicon-user"></span>Settings</a></li>
+                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span>Log Out</a></li>
             </ul>
           </div>
       </div>
   </nav>
 
   <div class="container">
+    <div class="page-header">
+      <h1>Search Results</h1>
+    </div>
+
     <a class="btn-lg btn-success" href="searchForItem.html">Go Back</a>
-    <h1>Search Results</h1>
+    <br>
+    <br>
 
-    <div class="couch" id="couch">
-      <a href="./couchDetails.html" class="thumbnail">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvDh-NnbeI2JmRcO1mkKctYhFDWwduxKq_7yjzh2X-VrCyDvrig"
-        alt="Item image" class="img" />
-        <h2>Couch</h2>
-      </a>
-    </div>
-
-    <div class="grandfatherClock" id="itemImage">
-      <a href="grandfatherClockDetails.html" class="thumbnail">
-        <img src="http://www.shipsmart.com/content/templates/images/prv/squares/grandfather-clock.jpg"
-        width="200" height="200" alt="Item image" class="img" />
-        <h2>Grandfather Clock</h2>
-      </a>
-    </div>
-
-    <div class="table" id="itemImage">
-      <a href="tableDetails.html" class="thumbnail">
-        <img src="https://images2.roomstogo.com/is/image/roomstogo/dr_tbl_42193502_riverdale_leg~Riverdale-Cherry-Rectangle-Dining-Table.jpeg?$PDP_Primary_936x650$"
-        width="200" height="200" alt="Item image" class="img" />
-        <h2>Table</h2>
-      </a>
-    </div>
+    <table class="table">
+      <tbody id="table_body_content">
+<!--         <tr>
+          <td>Couch</td>
+          <td>
+            <a href="./couchDetails.html">
+              <img src="https://goo.gl/e6R2JS" width="100" height="100" alt="Item image" class="img-thumbnail"/>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Grandfather Clock</td>
+          <td>
+            <a href="./grandfatherClockDetails.html">
+              <img src="https://goo.gl/s3WU89" width="100" height="100" alt="Item image" class="img-thumbnail"/>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Table</td>
+          <td>
+            <a href="tableDetails.html">
+              <img src="https://goo.gl/FDgd4t" width="100" height="100" alt="Item image" class="img-thumbnail"/>
+            </a>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
 
   </div>
+
+  <script src="../js/searchResults.js"></script>
 
 </body>
 </html>
