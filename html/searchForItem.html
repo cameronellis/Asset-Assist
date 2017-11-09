@@ -41,39 +41,39 @@
   </nav>
 
   <div class="container">
+    <div class="page-header">
+      <h1>Search for Item</h1>
+    </div>
 
-    <h1>Search for Item</h1>
-
-  <div id="searchNameSection">
-      <h2>Search by Name</h2>
-      <input id="searchName" class="form-control input-lg"></input>
+    <div id="searchNameSection">
+      <input id="searchName" class="form-control input-lg" placeholder="Search by Name"></input>
       <span class="help-block" id="searchNameError"></span>
+
+      <a class="btn-lg btn-success" id="searchButton">Search</a>
+
+      <h3><a href="./advancedSearch.html">Advanced Search</a></h3>
+
+      <h2>Recent Searches</h2>
+      <div class="couch" id="couch">
+        <a href="./couchDetails.html" class="thumbnail">
+          <h3>Couch</h3>
+        </a>
+      </div>
+
+      <div class="grandfatherClock" id="itemImage">
+        <a href="grandfatherClockDetails.html" class="thumbnail">
+          <h3>Grandfather Clock</h3>
+        </a>
+      </div>
+
+      <div class="table" id="itemImage">
+        <a href="tableDetails.html" class="thumbnail">
+          <h3>Table</h3>
+        </a>
+      </div>
+    </div>
   </div>
 
-  <a class="btn-lg btn-success" id="searchButton">Search</a>
-
-
-    <h3><a href="./advancedSearch.html">Advanced Search</a></h3>
-    <h2>Recent Searches</h2>
-
-    <div class="couch" id="couch">
-      <a href="./couchDetails.html" class="thumbnail">
-        <h3>Couch</h3>
-      </a>
-    </div>
-
-    <div class="grandfatherClock" id="itemImage">
-      <a href="grandfatherClockDetails.html" class="thumbnail">
-        <h3>Grandfather Clock</h3>
-      </a>
-    </div>
-
-    <div class="table" id="itemImage">
-      <a href="tableDetails.html" class="thumbnail">
-        <h3>Table</h3>
-      </a>
-    </div>
-  </div>
 
   <script src="../js/searchForItem.js"></script>
 
