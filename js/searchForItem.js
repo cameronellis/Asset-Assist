@@ -5,6 +5,8 @@ $(document).ready(function(){
 
     // Check if search box is filled
     if(searchName !== ""){
+      // set search query term here
+      localStorage.setItem("searchQuery", searchName);
       // go to search results page
       window.location = "searchResults.html";
     }
