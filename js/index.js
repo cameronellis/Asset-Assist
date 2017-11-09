@@ -39,7 +39,8 @@ $(document).ready(function(){
 
 		function initializeUserData(email){
 			let person = {};
-			
+			let assets = [];
+
 			// determine who is logging in
 			if(email === "cameron@gmail.com"){
 				person = {fName:"Cameron", lName:"Ellis", email:"cameron@gmail.com", password:"cameron"};
@@ -55,10 +56,58 @@ $(document).ready(function(){
 			}
 			if(email === "howard@gmail.com"){
 				person = {fName:"Howard", lName:"Schlottmann", email:"howard@gmail.com", password:"howard"};
+				// populate account with fake data
+				assets = [
+							{	
+								itemName:"Purple couch", itemPrice:"1200", itemYear:"2000", 
+								itemPicture:"https://goo.gl/KuZ75L", itemReceipt:"goo.gl/MkXENu", 
+								itemManufacturer:"Ikea", itemMiscNotes:"Some misc notes"
+							},
+							{
+								itemName:"Blue couch", itemPrice:"2000", itemYear:"2017",
+								itemPicture:"https://goo.gl/kfF5tT", itemReceipt:"https://goo.gl/4Gbu1H",
+								itemManufacturer:"Living Spaces", itemMiscNotes:"This couch is in my living room"
+							},
+							{
+								itemName:"Black Couch", itemPrice:"1500", itemYear:"1994",
+								itemPicture:"https://goo.gl/qqpXRp", itemReceipt:"https://goo.gl/3hZ1QU",
+								itemManufacturer:"Wal-Mart", itemMiscNotes:"This was a wedding gift"
+							},
+							{
+								itemName:"Brown grandfather clock", itemPrice:"1600", itemYear:"1901",
+								itemPicture:"https://goo.gl/YdeacM", itemReceipt:"https://goo.gl/8Dv6eG",
+								itemManufacturer:"Target", itemMiscNotes:"I got this from my sister"
+							},
+							{
+								itemName:"Toy grandfather clock christmas ornament", itemPrice:"2.99", itemYear:"2002",
+								itemPicture:"https://goo.gl/6c9rdo", itemReceipt:"goo.gl/MkXENu",
+								itemManufacturer:"Ikea", itemMiscNotes:""
+							},
+							{
+								itemName:"Yellow grandfather clock", itemPrice:"299.99", itemYear:"2016",
+								itemPicture:"https://goo.gl/3LznTK", itemReceipt:"https://goo.gl/4Gbu1H",
+								itemManufacturer:"Sears", itemMiscNotes:"I got this from my brother"
+							},
+							{
+								itemName:"Small black coffee table", itemPrice:"29.99", itemYear:"2014",
+								itemPicture:"https://goo.gl/nVT5Cx", itemReceipt:"https://goo.gl/3hZ1QU",
+								itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"I won this in a raffle"
+							},
+							{
+								itemName:"brown circular dining table", itemPrice:"1299.99", itemYear:"1927",
+								itemPicture:"https://goo.gl/QdKgLC", itemReceipt:"https://goo.gl/8Dv6eG",
+								itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"This is in my dining room"
+							},
+							{
+								itemName:"light brown study table", itemPrice:"300.00", itemYear:"2006",
+								itemPicture:"https://goo.gl/sxB8YW", itemReceipt:"goo.gl/MkXENu",
+								itemManufacturer:"Sears", itemMiscNotes:""
+							}
+						];
 			}
 
 			localStorage.setItem(email + "_userdata", JSON.stringify(person));
-			localStorage.setItem(email + "_assets"  , JSON.stringify([]));
+			localStorage.setItem(email + "_assets"  , JSON.stringify(assets));
 		}
 
 		// The user is allowed to log in
