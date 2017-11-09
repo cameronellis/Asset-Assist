@@ -44,6 +44,29 @@ $(document).ready(function(){
 			// determine who is logging in
 			if(email === "cameron@gmail.com"){
 				person = {fName:"Cameron", lName:"Ellis", email:"cameron@gmail.com", password:"cameron"};
+				// populate account with fake data
+				assets = [
+							{
+								itemName:"ACER computer monitor", itemPrice:"600", itemYear:"2015",
+								itemPicture:"https://goo.gl/EpK23A", itemReceipt:"goo.gl/MkXENu",
+								itemManufacturer:"ACER", itemMiscNotes:"My new computer monitor!"								
+							},
+							{
+								itemName:"old computer monitor", itemPrice:"40", itemYear:"1997",
+								itemPicture:"https://goo.gl/emRYCT", itemReceipt:"https://goo.gl/4Gbu1H",
+								itemManufacturer:"HP", itemMiscNotes:"Picked this up from my grandpa"
+							},
+							{
+								itemName:"keyboard", itemPrice:"60", itemYear:"2013",
+								itemPicture:"https://goo.gl/6SW45B", itemReceipt:"https://goo.gl/3hZ1QU",
+								itemManufacturer:"ACER", itemMiscNotes:"bought this on newegg"
+							},
+							{
+								itemName:"laptop", itemPrice:"750", itemYear:"2015",
+								itemPicture:"https://goo.gl/t8dFmP", itemReceipt:"https://goo.gl/8Dv6eG",
+								itemManufacturer:"HP", itemMiscNotes:""
+							}
+						];
 			}
 			if(email === "fernando@gmail.com"){
 				person = {fName:"Fernando", lName:"Cortez", email:"fernando@gmail.com", password:"fernando"};
