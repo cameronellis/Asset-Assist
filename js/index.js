@@ -48,7 +48,7 @@ $(document).ready(function(){
 				assets = [
 							{
 								itemName:"ACER computer monitor", itemPrice:"600", itemYear:"2015",
-								itemPicture:"https://goo.gl/EpK23A", itemReceipt:"goo.gl/MkXENu",
+								itemPicture:"https://goo.gl/EpK23A", itemReceipt:"https://goo.gl/xtTnZi",
 								itemManufacturer:"ACER", itemMiscNotes:"My new computer monitor!"								
 							},
 							{
@@ -83,7 +83,7 @@ $(document).ready(function(){
 				assets = [
 							{	
 								itemName:"Purple couch", itemPrice:"1200", itemYear:"2000", 
-								itemPicture:"https://goo.gl/KuZ75L", itemReceipt:"goo.gl/MkXENu", 
+								itemPicture:"https://goo.gl/KuZ75L", itemReceipt:"https://goo.gl/xtTnZi", 
 								itemManufacturer:"Ikea", itemMiscNotes:"Some misc notes"
 							},
 							{
@@ -103,7 +103,7 @@ $(document).ready(function(){
 							},
 							{
 								itemName:"Toy grandfather clock christmas ornament", itemPrice:"2.99", itemYear:"2002",
-								itemPicture:"https://goo.gl/6c9rdo", itemReceipt:"goo.gl/MkXENu",
+								itemPicture:"https://goo.gl/6c9rdo", itemReceipt:"https://goo.gl/xtTnZi",
 								itemManufacturer:"Ikea", itemMiscNotes:""
 							},
 							{
@@ -123,7 +123,7 @@ $(document).ready(function(){
 							},
 							{
 								itemName:"light brown study table", itemPrice:"300.00", itemYear:"2006",
-								itemPicture:"https://goo.gl/sxB8YW", itemReceipt:"goo.gl/MkXENu",
+								itemPicture:"https://goo.gl/sxB8YW", itemReceipt:"https://goo.gl/xtTnZi",
 								itemManufacturer:"Sears", itemMiscNotes:""
 							}
 						];
