@@ -28,4 +28,5 @@ $(document).ready(function(){
 // display on the next page
 function setIndexToDisplay(i){
     localStorage.setItem("indexToDisplay", i);
+    window.location = "../html/itemDetails.html";
 }
