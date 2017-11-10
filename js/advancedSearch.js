@@ -27,6 +27,8 @@ $(document).ready(function() {
                       };
 
     // update search query
-    localStorage.setItem("searchQuery", JSON.stringify(searchQuery));
+    localStorage.setItem("advancedSearchQuery", JSON.stringify(searchQuery));
+    // set search type to advanced
+    localStorage.setItem("searchType", "advanced");
   });
 });
