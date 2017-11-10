@@ -7,6 +7,8 @@ $(document).ready(function(){
     if(searchName !== ""){
       // set search query term here
       localStorage.setItem("searchQuery", searchName);
+      // set search type to basic
+      localStorage.setItem("searchType", "basic");
       // go to search results page
       window.location = "searchResults.html";
     }
@@ -14,7 +16,7 @@ $(document).ready(function(){
     else {
       // Give input box a red border
       $("#searchNameSection").addClass("has-error");
-      //Error Message
+      // Error Message
       $("#searchNameError").text("Please provide an item name to search");
     }
   });
