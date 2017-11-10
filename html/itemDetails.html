@@ -8,8 +8,6 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Custom CSS for this page -->
-    <link href="css/itemDetails.css" type="text/css" rel="stylesheet" />
   </head>
 <body>
 
@@ -32,42 +30,43 @@
               </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">            <span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+              <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
             </ul>
           </div>
       </div>
   </nav>
+  
+  <div class="container">
 
-  <h1> Couch </h1>
-  <h3>Item Name: Couch</h3>
-  <h3>Price: $1200</h3>
-  <h3>Year of Purchase: 2003<h3>
-  <h3>Manufacturer: Ikea<h3>
+    <div class="page-header">
+      <h1 id="itemName"></h1>
+    </div>    
 
-  <div class="itemImage" id="itemImage">
-    <a href="itemImage.html" class="thumbnail">
-      <p>Item Image</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKvDh-NnbeI2JmRcO1mkKctYhFDWwduxKq_7yjzh2X-VrCyDvrig"
-        alt="Item image" class="img" />
+    <h2>Item Image</h2>
+    <!-- change the width and height attributes later... -->
+    <img id="itemImage" width="200", height="200"></img>
+    <h2>Item Receipt</h2>
+    <img id="itemReceipt" width="200" height="200"></img>
+    <h2 id="itemPrice"></h2>
+    <h2 id="itemYear"><h2>
+    <h2 id="itemManufacturer"><h2>
+    <h2>Item Misc. Notes</h2>
+    <h4 id="itemMiscNotes"></h4>
 
-  	</a>
+    <div class="editItem" id="editItem">
+      <a href="./editItem.html" class="thumbnail">
+        <p>Edit Item Info</p>
+        <img src="https://www.shareicon.net/data/2017/02/09/878606_edit_512x512.png"
+          width="50" height="50" alt="Edit Item" class="img" />
+      </a>
+    </div>
+  
+    <button onclick="deleteAsset()" class="btn-lg btn-danger">Delete Asset</button>
+    <br></br>
   </div>
 
-  <div class="receiptImage" id="receiptImage">
-    <a href="receiptImage" class="thumbnail">
-      <p>Receipt Image</p>
-      <img src="https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/JMEAAOSwU8hY7jvS/$_86.JPG"
-        width="200" height="200" alt"Receipt image" class="img" />
-    </a>
-  </div>
 
-  <div class="editItem" id="editItem">
-    <a href="./editItem.html" class="thumbnail">
-      <p>Edit Item Info</p>
-      <img src="https://www.shareicon.net/data/2017/02/09/878606_edit_512x512.png"
-        width="50" height="50" alt"Edit Item" class="img" />
-    </a>
-  </div>
+  <script src="../js/itemDetails.js"></script>
 
 </body>
 </html>
