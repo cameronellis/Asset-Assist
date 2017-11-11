@@ -4,6 +4,10 @@ $(document).ready(function(){
     let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
     let searchType = localStorage.getItem("searchType");
 
+    // show who is logged in
+    let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+    $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
+
     function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
             "<tr>" + 

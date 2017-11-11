@@ -3,23 +3,26 @@ $(document).ready(function(){
 	let indexToDisplay = localStorage.getItem("indexToDisplay");
 	let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
 	let dataToDisplay = usersAssets[indexToDisplay];
+  let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 
-	// Populates options for the "Year of Purchase" field
-	// code taken from: http://jsfiddle.net/s8HaQ/
-	let start = new Date().getFullYear();
-	let end = 1900;
-	let options = "<option></option>";
+  // Populates options for the "Year of Purchase" field
+  // code taken from: http://jsfiddle.net/s8HaQ/
+  let start = new Date().getFullYear();
+  let end = 1900;
+  let options = "<option></option>";
 
-	for(let year = start ; year >=end; year--){
-		if(year === parseInt(dataToDisplay.itemYear)){
+  for(let year = start ; year >=end; year--){
+    if(year === parseInt(dataToDisplay.itemYear)){
       options += "<option selected>"+ year +"</option>";
     }
     else{
-	    options += "<option>"+ year +"</option>";
+      options += "<option>"+ year +"</option>";
     }
-	}
-	// document.getElementById("yearOfPurchase").innerHTML = options;
+  }
   $("#yearOfPurchase").html(options);
+
+  // Display which app user is logged in
+  $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
   // Pre-populate fields
 	$("#itemNameField").attr("value", dataToDisplay.itemName);

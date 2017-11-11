@@ -24,6 +24,11 @@ $(document).ready(function(){
 	// the last element in the list is the latest element to have been inserted
 	let assetToDisplay = usersAssets[usersAssets.length - 1];
 
+	// show who is logged in
+	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
+
 	// Display content in its respective place in the page
 	$("#itemName").text(assetToDisplay.itemName);
 	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
