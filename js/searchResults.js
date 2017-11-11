@@ -4,6 +4,19 @@ $(document).ready(function(){
     let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
     let searchType = localStorage.getItem("searchType");
 
+    function appendToHTMLTable(itemName, itemPicture, i){
+        $("#table_body_content").append(
+            "<tr>" + 
+                "<td><h3>" + itemName + "</h3></td>" + 
+                "<td>" + 
+                    "<a onclick='setIndexToDisplay(" + i + ")'>" + 
+                        "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" + 
+                    "</a>" + 
+                "</td>" + 
+            "</tr>"
+        );
+    }
+
     if(searchType === "basic"){
         let searchQuery = localStorage.getItem("searchQuery");
         let searchQueryToLowerCase = searchQuery.toLowerCase();
@@ -14,16 +27,7 @@ $(document).ready(function(){
 
             // if the search string is a substring of the item
             if(itemNameToLowerCase.indexOf(searchQueryToLowerCase) !== -1){
-                $("#table_body_content").append(
-                    "<tr>" + 
-                        "<td><h3>" + users_assets[i].itemName + "</h3></td>" + 
-                        "<td>" + 
-                            "<a onclick='setIndexToDisplay(" + i + ")'>" + 
-                                "<img src='" + users_assets[i].itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" + 
-                            "</a>" + 
-                        "</td>" + 
-                    "</tr>"
-                );
+                appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
             }
         }
     }
@@ -42,9 +46,6 @@ $(document).ready(function(){
         let priceRangeGap = 500;
         let priceRange_lower = parseInt(advancedSearchQuery.priceRange);
         let priceRange_upper = priceRange_lower + priceRangeGap;
-
-        // console.log(advancedSearchQuery);
-        // console.log("priceRange_lower: " + priceRange_lower + " priceRange_upper: " + priceRange_upper);
 
         // iterate through all of the assts that the users own - filter them through advanced search query
         for(let i = 0; i < users_assets.length; i++){
@@ -120,15 +121,7 @@ $(document).ready(function(){
                 && assetPriceWithinSearchPriceRange
             )
             {
-                // Append this information to the table
-                console.log("itemName: " + users_assets[i].itemName);
-                console.log("itemPrice: " + users_assets[i].itemPrice);
-                console.log("itemYear: " + users_assets[i].itemYear);
-                console.log("itemPicture: " + users_assets[i].itemPicture);
-                console.log("itemReceipt: " + users_assets[i].itemReceipt);
-                console.log("itemManufacturer: " + users_assets[i].itemManufacturer);
-                console.log("itemMiscNotes: " + users_assets[i].itemMiscNotes);
-                console.log("");
+                appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
             }
         }        
 
