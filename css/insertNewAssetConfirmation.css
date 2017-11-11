@@ -21,3 +21,8 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+/* Give each icon spacing */
+.icon {
+  margin-right: 10px;
+}

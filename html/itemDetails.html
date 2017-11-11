@@ -8,11 +8,13 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="../css/itemDetails.css" type="text/css" rel="stylesheet" />
   </head>
 <body>
 
   <!-- navigation bar -->
-  <nav class="navbar navbar-inverse">
+  <nav id="navigationManu" class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -25,14 +27,14 @@
           <div class="collapse navbar-collapse" id="myNavbar">
               <p id="usersFullName" class="navbar-text"></p>
               <ul class="nav navbar-nav">
-                  <li><a href="homepage.html">Home</a></li>
-                  <li><a href="insertNewAsset.html">Insert Asset</a></li>
-                  <li><a href="searchForItem.html">Search for Item</a></li>
+                  <li class="active"><a href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a></li>
+                  <li><a href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a></li>
+          <li><a href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Item</a></li>
               </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">            <span class="glyphicon glyphicon-user"></span>Settings</a></li>
-              <li><a href="..\index.html"><span class="glyphicon glyphicon-log-in"></span>Log Out</a></li>
-            </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a></li>
+                  <li><a href="..\index.html">    <span class="icon glyphicon glyphicon-log-in"></span>Log Out</a></li>
+              </ul>
           </div>
       </div>
   </nav>
