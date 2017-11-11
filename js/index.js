@@ -40,6 +40,7 @@ $(document).ready(function(){
 		function initializeUserData(email){
 			let person = {};
 			let assets = [];
+			let recentSearches = [];
 
 			// determine who is logging in
 			if(email === "cameron@gmail.com"){
@@ -129,8 +130,9 @@ $(document).ready(function(){
 						];
 			}
 
-			localStorage.setItem(email + "_userdata", JSON.stringify(person));
-			localStorage.setItem(email + "_assets"  , JSON.stringify(assets));
+			localStorage.setItem(email + "_userdata"      , JSON.stringify(person));
+			localStorage.setItem(email + "_assets"        , JSON.stringify(assets));
+			localStorage.setItem(email + "_recentSearches", JSON.stringify(recentSearches));
 		}
 
 		// The user is allowed to log in
