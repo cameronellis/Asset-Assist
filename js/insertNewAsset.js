@@ -8,6 +8,28 @@ for(let year = start ; year >=end; year--){
 }
 document.getElementById("year").innerHTML = options;
 
+// code to run when an asset image/receipt is uploaded
+// taken from: https://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript
+function encodeImageFileAsURL(inputID, newImgID, divID){
+	let filesSelected = document.getElementById(inputID).files;
+	if (filesSelected.length > 0) {
+
+      	let fileToLoad = filesSelected[0];
+      	let fileReader = new FileReader();
+
+      	fileReader.onload = function(fileLoadedEvent) {
+      		let srcData = fileLoadedEvent.target.result; // <--- data: base64
+
+      		let newImage = document.createElement('img');
+      		newImage.id  = newImgID;
+        	newImage.src = srcData;
+
+        	document.getElementById(divID).innerHTML = newImage.outerHTML;
+      	}
+
+      	fileReader.readAsDataURL(fileToLoad);
+	}
+}
 
 $(document).ready(function(){
 	// show who is logged in
@@ -20,14 +42,14 @@ $(document).ready(function(){
 		let itemNameField  = $("#itemNameField").val();
 		let itemPriceField = $("#itemPriceField").val();
 		let itemYearField  = $("#year").val();
-		let itemPictureField = $("#itemPictureField").val();
-		let itemReceiptField = $("#itemReceiptField").val();
+		let itemPictureField = $("#assetImg").attr("src");
+		let itemReceiptField = $("#assetReceipt").attr("src");
 		let itemManufacturerField = $("#itemManufacturerField").val();
 		let itemMiscNotesField = $("#itemMiscNotesField").val();
 
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== "" && itemReceiptField !== "" && itemManufacturerField !== ""){
+			&& itemPictureField !== "" && itemManufacturerField !== ""){
 			
 			// retrieve users's list of assets from localStorage
 			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
@@ -104,18 +126,6 @@ $(document).ready(function(){
 			else{
 				// give input box a green border
 				$('#itemPictureSection').addClass("has-success");
-			}
-
-			// Please provide a receipt of the item
-			if(itemReceiptField === ""){
-				// give input box a red border
-				$("#itemReceiptSection").addClass("has-error");
-				// Error message
-				$("#pictureOfReceiptError").text("Please provide a picture of the receipt of the item");
-			}
-			else{
-				// give input box a green border
-				$("#itemReceiptSection").addClass("has-success");
 			}
 
 			if(itemManufacturerField === ""){
