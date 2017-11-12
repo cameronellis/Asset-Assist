@@ -9,6 +9,6 @@ $(document).ready(function(){
 	let numOfAssets = user_assets.length;
 	
 	// displays number of assets saved to account
-	$("numOfAssetsSection").text("You have " + numOfAssets + " assets."
+	$("#numOfAssetsSection").text("You have " + numOfAssets + " assets.");
 	
 });
