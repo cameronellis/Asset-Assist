@@ -11,11 +11,14 @@ $(document).ready(function(){
     function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
             "<tr>" + 
-                "<td><h3>" + itemName + "</h3></td>" + 
+                "<td><h4>" + itemName + "</h4></td>" + 
                 "<td>" + 
                     "<a onclick='setIndexToDisplay(" + i + ")'>" + 
                         "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" + 
                     "</a>" + 
+                "</td>" + 
+                "<td>" + 
+                    "<a class='btn btn-primary' onclick='setIndexToDisplay(" + i + ")'>Item Details</a>" + 
                 "</td>" + 
             "</tr>"
         );
