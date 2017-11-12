@@ -24,6 +24,7 @@ $(document).ready(function(){
     if(searchType === "basic"){
         let searchQuery = localStorage.getItem("searchQuery");
         let searchQueryToLowerCase = searchQuery.toLowerCase();
+        let searchResultCount = 0;
 
         // iterate through all of the assts that the users own - filter them through the search query
         for(let i = 0; i < users_assets.length; i++){
@@ -32,7 +33,13 @@ $(document).ready(function(){
             // if the search string is a substring of the item
             if(itemNameToLowerCase.indexOf(searchQueryToLowerCase) !== -1){
                 appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
+                searchResultCount++;
             }
+        }
+
+        // if there are no assets to display
+        if(searchResultCount === 0){
+            $("#errorMessage").text("Your search for \"" + searchQuery + "\" did not match any assets");
         }
     }
 
@@ -51,13 +58,13 @@ $(document).ready(function(){
         let priceRange_lower = parseInt(advancedSearchQuery.priceRange);
         let priceRange_upper = priceRange_lower + priceRangeGap;
 
+        let searchResultCount = 0;
+
         // iterate through all of the assts that the users own - filter them through advanced search query
         for(let i = 0; i < users_assets.length; i++){
             let itemNameToLowerCase = users_assets[i].itemName.toLowerCase();
             let assetManufacturerToLowerCase = users_assets[i].itemManufacturer.toLowerCase();
             let itemPrice = parseInt(users_assets[i].itemPrice);
-
-            // console.log("users_assets[i].itemPrice: " + parseInt(users_assets[i].itemPrice));
 
             // if asset name provided
             if(advancedSearchQuery.assetName !== ""){
@@ -126,9 +133,14 @@ $(document).ready(function(){
             )
             {
                 appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
+                searchResultCount++;
             }
-        }        
+        }
 
+        // if there are no assets to display 
+        if(searchResultCount === 0){
+            $("#errorMessage").text("Your search criteria did not match any assets");
+        }
     }
 });
 
