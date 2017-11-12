@@ -7,8 +7,15 @@ $(document).ready(function(){
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);	
 	
 	let numOfAssets = user_assets.length;
+
+	let assetsSum = 0;
 	
 	// displays number of assets saved to account
-	$("#numOfAssetsSection").text("You have " + numOfAssets + " assets saved.");
+	$("#numOfAssetsSection").text("Total assets saved: " + numOfAssets);
 	
+	for(let i = 0; i < numOfAssets; i++) {
+		assetsSum += parseInt(user_assets[i].itemPrice);
+	}
+	
+	$("#totalValue").text("Total value of all assets: $" + assetsSum);
 });
