@@ -34,6 +34,11 @@ $(document).ready(function(){
 	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
 	$("#itemYear").text(assetToDisplay.itemYear);
 	$("#itemManufacturer").text(assetToDisplay.itemManufacturer);
+	// item image
+	$("#itemPicture").attr("src", assetToDisplay.itemPicture);
+	// item receipt
+	$("#itemReceipt").attr("src", assetToDisplay.itemReceipt);
+
 	$("#itemMiscDetails").text(assetToDisplay.itemMiscNotes);
 
 });
