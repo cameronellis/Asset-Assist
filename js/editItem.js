@@ -40,21 +40,24 @@ $(document).ready(function(){
     let itemPicture      = $("#itemImage").attr("src");
     let itemManufacturer = $("#itemManufacturerField").val();
 
-    // check if all mandatory forms are filled in...
+    // All mandatory forms are filled in...
     if( itemNameField !== "" && itemPrice !== "" && itemYear !== "" 
         && itemManufacturer !== ""){
       console.log("All mandatory fields are filled in");
-      // let newAssetField = { 
-      //                       itemName: $("#itemNameField").val(), itemPrice: $("#itemPriceField").val(),
-      //                       itemYear: $("#yearOfPurchase").val(), itemPicture: dataToDisplay.itemPicture,
-      //                       itemReceipt: dataToDisplay.itemReceipt, itemManufacturer: $("#itemManufacturerField").val(),
-      //                       itemMiscNotes: $("#itemMiscNotesField").val()
-      //                     }; 
-      // // update the asset with the new information
-      // usersAssets[indexToDisplay] = newAssetField;
-      // localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+      let newAssetField = { 
+                            itemName: $("#itemNameField").val(), 
+                            itemPrice: $("#itemPriceField").val(),
+                            itemYear: $("#yearOfPurchase").val(), 
+                            itemPicture: $("#itemImage").attr("src"),
+                            itemReceipt: $("#itemReceipt").attr("src"), 
+                            itemManufacturer: $("#itemManufacturerField").val(),
+                            itemMiscNotes: $("#itemMiscNotesField").val()
+                          }; 
+      // update the asset with the new information
+      usersAssets[indexToDisplay] = newAssetField;
+      localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
       // go to item information page
-      // window.location = "../html/itemDetails.html";
+      window.location = "../html/itemDetails.html";
     }   
     // All fields not filled in, highlight which ones are and which ones are not 
     else{
@@ -103,3 +106,22 @@ $(document).ready(function(){
 
   });
 });
+
+function swapOutImage(inputID, imgID){
+  let filesSelected = document.getElementById(inputID).files;
+  if (filesSelected.length > 0) {
+
+    let fileToLoad = filesSelected[0];
+    let fileReader = new FileReader();
+
+    fileReader.onload = function(fileLoadedEvent) {
+      // convert inputted image to base64
+      let srcData = fileLoadedEvent.target.result;
+      let assetImage = document.getElementById(imgID);
+
+      assetImage.src = srcData;
+    }
+
+    fileReader.readAsDataURL(fileToLoad);
+  }
+}

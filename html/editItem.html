@@ -55,7 +55,7 @@
       <h2>Asset's Price *</h2>
       <div class="input-group">
         <div class="input-group-addon">$</div>
-        <input type="text" class="form-control input-lg" id="itemPriceField" value="500"></input>
+        <input type="text" class="form-control input-lg" id="itemPriceField"></input>
       </div>
       <span class="help-block" id="assetPriceError"></span>
     </div>
@@ -68,21 +68,21 @@
     
     <h2>Picture of Asset *</h2>
     <div id="itemImageSection">
-        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptInput"></input>
+        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemImageInput" onchange="swapOutImage('itemImageInput', 'itemImage')"></input>
         <br></br>
         <img id="itemImage" height="200" alt="Item image goes here" class="img" />
     </div>
 
     <h2>Picture of Receipt</h2>
     <div class="itemReceiptSection">
-        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptInput"></input>
+        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptInput" onchange="swapOutImage('itemReceiptInput', 'itemReceipt')"></input>
         <br></br>
         <img id="itemReceipt" height="200" alt="Receipt image goes here" class="img" />
     </div>
     
     <div id="assetManufacturerSection">
       <h2>Asset Manufacturer *</h2>
-      <input id="itemManufacturerField" type="text" class="form-control input-lg" name="manufacturer" value="Laz-Z-Boy">
+      <input id="itemManufacturerField" type="text" class="form-control input-lg" name="manufacturer"></input>
       <span class="help-block" id="assetManufacturerError"></span>
     </div>
 
@@ -93,7 +93,7 @@
     </form>
 
     <br><br>
-    <a id="submitButton" class="btn-lg btn-success">Submit</a>
+    <a id="submitButton" class="btn-lg btn-success">Change Asset Details</a>
     <br><br>
 
   </div>
