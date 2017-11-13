@@ -65,12 +65,16 @@ $(document).ready(function(){
 									"itemManufacturer": itemManufacturerField,
 									"itemMiscNotes": itemMiscNotesField
 								});
-			
+			try{	
 			// insert updated list into localStorage
 			localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
 			
 			// go to confirmation page
 			window.location = "insertNewAssetConfirmation.html";
+			}
+			catch(e){
+				console.log("Insert Item: Local storage has been maxed out");
+			}
 
 		}
 		// All fields not filled in, highlight which ones are and which ones are not

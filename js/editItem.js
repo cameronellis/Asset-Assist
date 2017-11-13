@@ -43,7 +43,6 @@ $(document).ready(function(){
     // All mandatory forms are filled in...
     if( itemNameField !== "" && itemPrice !== "" && itemYear !== "" 
         && itemManufacturer !== ""){
-      console.log("All mandatory fields are filled in");
       let newAssetField = { 
                             itemName: $("#itemNameField").val(), 
                             itemPrice: $("#itemPriceField").val(),
@@ -55,9 +54,17 @@ $(document).ready(function(){
                           }; 
       // update the asset with the new information
       usersAssets[indexToDisplay] = newAssetField;
-      localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
-      // go to item information page
-      window.location = "../html/itemDetails.html";
+
+      try{
+        localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+        // go to item information page
+        window.location = "../html/itemDetails.html";
+      }
+      // if local storage has been maxed out - display an error message beneath the submit button
+      catch(e){
+        console.log("Local storage has been maxed out");
+      }
+      
     }   
     // All fields not filled in, highlight which ones are and which ones are not 
     else{
