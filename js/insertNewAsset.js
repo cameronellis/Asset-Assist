@@ -47,9 +47,12 @@ $(document).ready(function(){
 		let itemManufacturerField = $("#itemManufacturerField").val();
 		let itemMiscNotesField = $("#itemMiscNotesField").val();
 
+		console.log("itemPictureField: " + itemPictureField);
+		console.log("itemReceiptField: " + itemReceiptField);
+
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== "" && itemManufacturerField !== ""){
+			&& itemPictureField !== undefined && itemManufacturerField !== ""){
 			
 			// retrieve users's list of assets from localStorage
 			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
@@ -121,7 +124,7 @@ $(document).ready(function(){
 			}
 
 			// if a picture of the item is not given
-			if(itemPictureField === ""){
+			if(itemPictureField === undefined){
 				// give input box a red border
 				$('#itemPictureSection').addClass("has-error");
 				// Error message
