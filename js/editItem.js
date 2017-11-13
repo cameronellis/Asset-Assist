@@ -61,7 +61,7 @@ $(document).ready(function(){
         window.location = "../html/itemDetails.html";
       }
       // if local storage has been maxed out - display an error message beneath the submit button
-      catch(e){
+      catch(DOMException){
         console.log("Local storage has been maxed out");
       }
       

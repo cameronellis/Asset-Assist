@@ -72,7 +72,7 @@ $(document).ready(function(){
 			// go to confirmation page
 			window.location = "insertNewAssetConfirmation.html";
 			}
-			catch(e){
+			catch(DOMException){
 				console.log("Insert Item: Local storage has been maxed out");
 			}
 
