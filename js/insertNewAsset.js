@@ -47,9 +47,6 @@ $(document).ready(function(){
 		let itemManufacturerField = $("#itemManufacturerField").val();
 		let itemMiscNotesField = $("#itemMiscNotesField").val();
 
-		console.log("itemPictureField: " + itemPictureField);
-		console.log("itemReceiptField: " + itemReceiptField);
-
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
 			&& itemPictureField !== undefined && itemManufacturerField !== ""){
