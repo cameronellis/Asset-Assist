@@ -1,0 +1,25 @@
+  /* Outline all input form boxes black*/
+.form-control {
+  border: 2px solid black;
+}
+
+/* Insert a border around the [$] sign in "Price of Item" */
+.input-group-addon {
+	border: 2px solid black;
+}
+
+/* Give each icon in the navigation menu spacing */
+.icon {
+  margin-right: 10px;
+}
+
+/* make images uniform size in table */
+#table_body_content img {
+  display: block;
+  height: 100px;
+}
+
+
+#table_body_content {
+  padding: 5px;
+}
