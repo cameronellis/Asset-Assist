@@ -27,6 +27,13 @@ div.panel {
   margin-right: 10px;
 }
 
-img {
+/* User Inserted images */
+img .userImage{
     height: 200px;
+}
+
+#successIcon {
+    display: block;
+    margin: 0 auto;
+    height: 200px;   
 }
