@@ -1,0 +1,18 @@
+  /* Outline all input form boxes black*/
+.form-control {
+  border: 2px solid black;
+}
+
+/* Insert a border around the [$] sign in "Price of Item" */
+.input-group-addon {
+	border: 2px solid black;
+}
+
+/* Give each icon in the navigation menu spacing */
+.icon {
+  margin-right: 10px;
+}
+
+.asterisk {
+	color: red;
+}

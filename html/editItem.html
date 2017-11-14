@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Custom CSS -->
-  <link href="../css/style.css" type="text/css" rel="stylesheet"></link>
+  <link href="../css/editItem.css" type="text/css" rel="stylesheet"></link>
 </head>
 
 <body>
@@ -46,13 +46,13 @@
     </div>
 
     <div id="assetNameSection">
-      <h2>Asset's Name *</h2>
+      <h2>Asset's Name <span class="asterisk">*</span></h2>
       <input id="itemNameField" type="text" class="form-control input-lg" name="itemName"></input>
       <span class="help-block" id="assetNameError"></span>
     </div>
 
     <div id="assetPriceSection">      
-      <h2>Asset's Price *</h2>
+      <h2>Asset's Price <span class="asterisk">*</span></h2>
       <div class="input-group">
         <div class="input-group-addon">$</div>
         <input type="text" class="form-control input-lg" id="itemPriceField"></input>
@@ -61,12 +61,12 @@
     </div>
 
     <div id="assetYearSection">
-      <h2>Asset's Year of Purchase *</h2>
+      <h2>Asset's Year of Purchase <span class="asterisk">*</span></h2>
       <select class="form-control input-lg" id="yearOfPurchase"></select>
       <span class="help-block" id="assetYearError"></span>
     </div>
     
-    <h2>Picture of Asset *</h2>
+    <h2>Picture of Asset <span class="asterisk">*</span></h2>
     <div id="itemImageSection">
         <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemImageInput" onchange="swapOutImage('itemImageInput', 'itemImage')"></input>
         <br></br>
