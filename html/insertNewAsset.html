@@ -50,6 +50,16 @@
 			<div id="itemNameError"></div>
 		</div>
 
+		<div id="itemPictureSection">
+			<h2>Picture of Item <span class="asterisk">*</span></h2>
+			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemPictureField" onchange="encodeImageFileAsURL('itemPictureField', 'assetImg', 'assetImgDiv')"></input>
+			<div id="assetImgDiv"></div>
+			<div id="pictureOfItemError"></div>
+			<div class="alert alert-warning">
+				<strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
+			</div>
+		</div>
+
 		<div id="itemPriceSection">
 			<h2>Price of Item <span class="asterisk">*</span></h2>
 			<div class="input-group">
@@ -65,14 +75,9 @@
 			<span class="help-block" id="yearValueError"></span>
 		</div>
 
-		<div id="itemPictureSection">
-			<h2>Picture of Item <span class="asterisk">*</span></h2>
-			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemPictureField" onchange="encodeImageFileAsURL('itemPictureField', 'assetImg', 'assetImgDiv')"></input>
-			<div id="assetImgDiv"></div>
-			<div id="pictureOfItemError"></div>
-			<div class="alert alert-warning">
-				<strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
-			</div>
+		<div id="itemManufacturerSection">	
+			<h2>Manufacturer </h2>
+			<input type="text" class="form-control input-lg" id="itemManufacturerField"></input>
 		</div>
 
 		<div id="itemReceiptSection">
@@ -82,12 +87,6 @@
 			<div class="alert alert-warning">
 				<strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
 			</div>
-		</div>
-
-
-		<div id="itemManufacturerSection">	
-			<h2>Manufacturer </h2>
-			<input type="text" class="form-control input-lg" id="itemManufacturerField"></input>
 		</div>
 
 		<h2>Misc. Notes</h2>
