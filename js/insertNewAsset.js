@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== undefined && itemManufacturerField !== ""){
+			&& itemPictureField !== undefined){
 			
 			// retrieve users's list of assets from localStorage
 			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
@@ -84,8 +84,7 @@ $(document).ready(function(){
 				// Give input box a red border
 				$("#itemNameSection").addClass("has-error");
 				// Error Message
-				$("#itemNameError").addClass("alert alert-danger");
-				$("#itemNameError").text("Please provide an asset name");
+				$("#itemNameError").text("Please provide an item name");
 			}
 			else{
 				$("#itemNameSection").addClass("has-success");
@@ -96,8 +95,7 @@ $(document).ready(function(){
 				// Give input box a red border
 				$('#itemPriceSection').addClass("has-error");
 				// Error message
-				$("#assetPriceError").addClass("alert alert-danger");
-				$("#assetPriceError").text("Please provide the asset's price");
+				$("#priceValueError").text("Please provide the item's price");
 			}
 			else{
 				$('#itemPriceSection').addClass("has-success");
@@ -108,8 +106,7 @@ $(document).ready(function(){
 				// Give input box a red border
 				$('#itemPriceSection').addClass("has-error");	
 				// Error message
-				$("#assetPriceError").addClass("alert alert-danger");
-				$("#assetPriceError").text("Please provide a valid price for the asset");							
+				$("#priceValueError").text("Please provide a valid price");							
 			}
 
 			// if an item year is not given
@@ -117,7 +114,6 @@ $(document).ready(function(){
 				// give input box a red border
 				$('#itemYearSection').addClass("has-error");
 				// Error message
-				$("#yearValueError").addClass("alert alert-danger");
 				$("#yearValueError").text("Please provide the year of purchase");
 			}
 			else{
@@ -129,24 +125,11 @@ $(document).ready(function(){
 				// give input box a red border
 				$('#itemPictureSection').addClass("has-error");
 				// Error message
-				$("#pictureOfItemError").addClass("alert alert-danger");
 				$('#pictureOfItemError').text("Please provide a picture of the item");
 			}
 			else{
 				// give input box a green border
 				$('#itemPictureSection').addClass("has-success");
-			}
-
-			if(itemManufacturerField === ""){
-				// give input box a red border
-				$("#itemManufacturerSection").addClass("has-error");
-				// Error message
-				$("#manufacturerNameError").addClass("alert alert-danger");
-				$("#manufacturerNameError").text("Please provide the item's manufacturer");
-			}
-			else{
-				// give input box a green border
-				$("#itemManufacturerSection").addClass("has-success");
 			}	
 		}
 	});
