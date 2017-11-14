@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 		// check if all mandatory forms are filled in...
 		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== undefined && itemManufacturerField !== ""){
+			&& itemPictureField !== undefined){
 			
 			// retrieve users's list of assets from localStorage
 			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
@@ -137,18 +137,6 @@ $(document).ready(function(){
 			else{
 				// give input box a green border
 				$('#itemPictureSection').addClass("has-success");
-			}
-
-			if(itemManufacturerField === ""){
-				// give input box a red border
-				$("#itemManufacturerSection").addClass("has-error");
-				// Error message
-				$("#manufacturerNameError").addClass("alert alert-danger");
-				$("#manufacturerNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's manufacturer");
-			}
-			else{
-				// give input box a green border
-				$("#itemManufacturerSection").addClass("has-success");
 			}	
 		}
 	});

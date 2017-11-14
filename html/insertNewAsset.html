@@ -47,7 +47,7 @@
 		<div id="itemNameSection">
 			<h2>Item Name *</h2>
 			<input id="itemNameField" class="form-control input-lg"></input>
-			<div id="itemNameError"></div>
+			<span class="help-block" id="itemNameError"></span>
 		</div>
 
 		<div id="itemPriceSection">
@@ -56,13 +56,13 @@
 			    <div class="input-group-addon">$</div>
 			    <input type="text" class="form-control input-lg" id="itemPriceField" placeholder="Amount"></input>
 			</div>
-			<div id="assetPriceError"></div>
+			<span class="help-block" id="priceValueError"></span>
 		</div>
 
 		<div id="itemYearSection">
 			<h2>Year of Purchase *</h2>
 			<select class="form-control input-lg" id="year"></select>
-			<div id="yearValueError"></div>
+			<span class="help-block" id="yearValueError"></span>
 		</div>
 
 		<div id="itemPictureSection">
@@ -84,16 +84,17 @@
 			</div>
 		</div>
 
+
 		<div id="itemManufacturerSection">	
-			<h2>Manufacturer *</h2>
+			<h2>Manufacturer </h2>
 			<input class="form-control input-lg" id="itemManufacturerField"></input>
-			<div id="manufacturerNameError"></div>
 		</div>
 
 		<h2>Misc. Notes</h2>
 		<textarea class="form-control input-lg" rows="5" id="itemMiscNotesField"></textarea>
 		<br></br>
 
+		<!-- <a class="btn-lg btn-success" id="submitButton" href="insertNewAssetConfirmation.html">Submit Item</a> -->
 		<a class="btn-lg btn-success" id="submitButton">Submit Item</a>
 		<br></br>
 	</div>

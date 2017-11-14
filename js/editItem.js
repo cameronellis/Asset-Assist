@@ -41,8 +41,7 @@ $(document).ready(function(){
     let itemManufacturer = $("#itemManufacturerField").val();
 
     // All mandatory forms are filled in...
-    if( itemNameField !== "" && itemPrice !== "" && itemYear !== "" 
-        && itemManufacturer !== ""){
+    if( itemNameField !== "" && itemPrice !== "" && itemYear !== "" ){
       let newAssetField = { 
                             itemName: $("#itemNameField").val(), 
                             itemPrice: $("#itemPriceField").val(),
@@ -99,18 +98,7 @@ $(document).ready(function(){
       else{
         $("#assetYearSection").addClass("has-success");
       }
-
-      // if item manufacturer is not provided 
-      if(itemManufacturer === ""){
-        $("#assetManufacturerSection").addClass("has-error");
-        // Error Message
-        $("#assetManufacturerError").text("Please provide the asset's manufacturer");
-      }
-      else{
-        $("#assetManufacturerSection").addClass("has-success");
-      }
     }
-
   });
 });
 
