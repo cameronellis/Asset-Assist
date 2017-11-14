@@ -75,8 +75,8 @@ $(document).ready(function(){
 			catch(DOMException){
 				console.log("Insert Item: Local storage has been maxed out");
 			}
-
 		}
+
 		// All fields not filled in, highlight which ones are and which ones are not
 		else{
 			// If an item name is not given
@@ -85,9 +85,10 @@ $(document).ready(function(){
 				$("#itemNameSection").addClass("has-error");
 				// Error Message
 				$("#itemNameError").addClass("alert alert-danger");
-				$("#itemNameError").text("Please provide an asset name");
+				$("#itemNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide an asset name");
 			}
 			else{
+				// Give input box a green border
 				$("#itemNameSection").addClass("has-success");
 			}
 
@@ -97,9 +98,10 @@ $(document).ready(function(){
 				$('#itemPriceSection').addClass("has-error");
 				// Error message
 				$("#assetPriceError").addClass("alert alert-danger");
-				$("#assetPriceError").text("Please provide the asset's price");
+				$("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
 			}
 			else{
+				// Give input box a green border
 				$('#itemPriceSection').addClass("has-success");
 			}
 
@@ -109,16 +111,16 @@ $(document).ready(function(){
 				$('#itemPriceSection').addClass("has-error");	
 				// Error message
 				$("#assetPriceError").addClass("alert alert-danger");
-				$("#assetPriceError").text("Please provide a valid price for the asset");							
+				$("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a valid price for the asset");
 			}
 
 			// if an item year is not given
 			if(itemYearField === ""){
-				// give input box a red border
+				// Give input box a red border
 				$('#itemYearSection').addClass("has-error");
 				// Error message
 				$("#yearValueError").addClass("alert alert-danger");
-				$("#yearValueError").text("Please provide the year of purchase");
+				$("#yearValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the year of purchase");
 			}
 			else{
 				$('#itemYearSection').addClass("has-success");
@@ -130,7 +132,7 @@ $(document).ready(function(){
 				$('#itemPictureSection').addClass("has-error");
 				// Error message
 				$("#pictureOfItemError").addClass("alert alert-danger");
-				$('#pictureOfItemError').text("Please provide a picture of the item");
+				$('#pictureOfItemError').html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a picture of the asset");
 			}
 			else{
 				// give input box a green border
@@ -142,7 +144,7 @@ $(document).ready(function(){
 				$("#itemManufacturerSection").addClass("has-error");
 				// Error message
 				$("#manufacturerNameError").addClass("alert alert-danger");
-				$("#manufacturerNameError").text("Please provide the item's manufacturer");
+				$("#manufacturerNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's manufacturer");
 			}
 			else{
 				// give input box a green border
