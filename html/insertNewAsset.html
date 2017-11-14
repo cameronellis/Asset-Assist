@@ -45,28 +45,28 @@
 		</div>
 
 		<div id="itemNameSection">
-			<h2>Item Name *</h2>
+			<h2>Item Name <span class="asterisk">*</span></h2>
 			<input id="itemNameField" class="form-control input-lg"></input>
-			<span class="help-block" id="itemNameError"></span>
+			<div id="itemNameError"></div>
 		</div>
 
 		<div id="itemPriceSection">
-			<h2>Price of Item *</h2>
+			<h2>Price of Item <span class="asterisk">*</span></h2>
 			<div class="input-group">
 			    <div class="input-group-addon">$</div>
 			    <input type="text" class="form-control input-lg" id="itemPriceField" placeholder="Amount"></input>
 			</div>
-			<span class="help-block" id="priceValueError"></span>
+			<div id="priceValueError"></div>
 		</div>
 
 		<div id="itemYearSection">
-			<h2>Year of Purchase *</h2>
+			<h2>Year of Purchase <span class="asterisk">*</span></h2>
 			<select class="form-control input-lg" id="year"></select>
 			<span class="help-block" id="yearValueError"></span>
 		</div>
 
 		<div id="itemPictureSection">
-			<h2>Picture of Item *</h2>
+			<h2>Picture of Item <span class="asterisk">*</span></h2>
 			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemPictureField" onchange="encodeImageFileAsURL('itemPictureField', 'assetImg', 'assetImgDiv')"></input>
 			<div id="assetImgDiv"></div>
 			<div id="pictureOfItemError"></div>
@@ -94,7 +94,6 @@
 		<textarea class="form-control input-lg" rows="5" id="itemMiscNotesField"></textarea>
 		<br></br>
 
-		<!-- <a class="btn-lg btn-success" id="submitButton" href="insertNewAssetConfirmation.html">Submit Item</a> -->
 		<a class="btn-lg btn-success" id="submitButton">Submit Item</a>
 		<br></br>
 	</div>
