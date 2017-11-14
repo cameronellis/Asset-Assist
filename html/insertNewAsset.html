@@ -47,7 +47,7 @@
 		<div id="itemNameSection">
 			<h2>Item Name *</h2>
 			<input id="itemNameField" class="form-control input-lg"></input>
-			<span class="help-block" id="itemNameError"></span>
+			<div id="itemNameError"></div>
 		</div>
 
 		<div id="itemPriceSection">
@@ -56,20 +56,20 @@
 			    <div class="input-group-addon">$</div>
 			    <input type="text" class="form-control input-lg" id="itemPriceField" placeholder="Amount"></input>
 			</div>
-			<span class="help-block" id="priceValueError"></span>
+			<div id="assetPriceError"></div>
 		</div>
 
 		<div id="itemYearSection">
 			<h2>Year of Purchase *</h2>
 			<select class="form-control input-lg" id="year"></select>
-			<span class="help-block" id="yearValueError"></span>
+			<div id="yearValueError"></div>
 		</div>
 
 		<div id="itemPictureSection">
 			<h2>Picture of Item *</h2>
 			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemPictureField" onchange="encodeImageFileAsURL('itemPictureField', 'assetImg', 'assetImgDiv')"></input>
 			<div id="assetImgDiv"></div>
-			<span class="help-block" id="pictureOfItemError"></span>
+			<div id="pictureOfItemError"></div>
 			<div class="alert alert-warning"><strong>Warning!</strong> Please only upload a small photo. This app is still a prototype.</div>
 		</div>
 
@@ -77,22 +77,19 @@
 			<h2>Picture of Receipt</h2>
 			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptField" onchange="encodeImageFileAsURL('itemReceiptField', 'assetReceipt', 'assetReceiptDiv')"></input>
 			<div id="assetReceiptDiv"></div>
-			<span class="help-block" id="pictureOfReceiptError"></span>
 			<div class="alert alert-warning"><strong>Warning!</strong> Please only upload a small photo. This app is still a prototype.</div>
 		</div>
-
 
 		<div id="itemManufacturerSection">	
 			<h2>Manufacturer *</h2>
 			<input class="form-control input-lg" id="itemManufacturerField"></input>
-			<span class="help-block" id="manufacturerNameError"></span>
+			<div id="manufacturerNameError"></div>
 		</div>
 
 		<h2>Misc. Notes</h2>
 		<textarea class="form-control input-lg" rows="5" id="itemMiscNotesField"></textarea>
 		<br></br>
 
-		<!-- <a class="btn-lg btn-success" id="submitButton" href="insertNewAssetConfirmation.html">Submit Item</a> -->
 		<a class="btn-lg btn-success" id="submitButton">Submit Item</a>
 		<br></br>
 	</div>
