@@ -19,7 +19,7 @@
   height: 100px;
 }
 
-
-#table_body_content {
+/* Padding between content of cell and borders */
+#table_body_content td {
   padding: 5px;
 }
