@@ -12,8 +12,13 @@ function deleteAccount(){
 }
 
 $(document).ready(function(){
-	// show who is logged in
+	// show who is logged in - in the navigation menu
 	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
 	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
+
+	// pre-populate first name, last name, and email fields with user's account details
+	$("#firstName").val(userData.fName);
+	$("#lastName").val(userData.lName);
+	$("#email").val(userData.email);
 });
