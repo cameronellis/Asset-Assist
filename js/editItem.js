@@ -72,7 +72,8 @@ $(document).ready(function(){
         // Give input box a red border
         $("#assetNameSection").addClass("has-error");
         // Error Message
-        $("#assetNameError").text("Please provide an asset name");
+        $("#assetNameError").addClass("alert alert-danger");
+        $("#assetNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
       }
       else{
         // Give input box a green border
@@ -83,7 +84,8 @@ $(document).ready(function(){
       if(itemPrice === ""){
         $("#assetPriceSection").addClass("has-error");
         // Error Message
-        $("#assetPriceError").text("Please provide the asset's price");
+        $("#assetPriceError").addClass("alert alert-danger");
+        $("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
       }
       else{
         $("#assetPriceSection").addClass("has-success");
@@ -93,7 +95,8 @@ $(document).ready(function(){
       if(itemYear === ""){
         $("#assetYearSection").addClass("has-error");
         // Error Message
-        $("#assetYearError").text("Please provide the asset's year of purchase");
+        $("#assetYearError").addClass("alert alert-danger");
+        $("#assetYearError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's year of purchase");
       }
       else{
         $("#assetYearSection").addClass("has-success");
