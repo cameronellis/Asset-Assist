@@ -10,16 +10,16 @@ $(document).ready(function(){
 
     function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
-            "<tr>" + 
-                "<td><h4>" + itemName + "</h4></td>" + 
-                "<td>" + 
-                    "<a onclick='setIndexToDisplay(" + i + ")'>" + 
-                        "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" + 
-                    "</a>" + 
-                "</td>" + 
-                "<td>" + 
-                    "<a class='btn btn-primary' onclick='setIndexToDisplay(" + i + ")'>Item Details</a>" + 
-                "</td>" + 
+            "<tr>" +
+                "<td>" +
+                    "<a onclick='setIndexToDisplay(" + i + ")'>" +
+                        "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" +
+                    "</a>" +
+                "</td>" +
+                  "<td><h4>" + itemName + "</h4></td>" +
+                "<td>" +
+                    "<a class='btn btn-primary' onclick='setIndexToDisplay(" + i + ")'>Item Details</a>" +
+                "</td>" +
             "</tr>"
         );
     }
@@ -48,7 +48,7 @@ $(document).ready(function(){
 
     else if(searchType === "advanced"){
         let advancedSearchQuery = JSON.parse(localStorage.getItem("advancedSearchQuery"));
-        
+
         let searchAssetNameIsSubstringOfAssetName = false;
         let assetPriceWithinSearchPriceRange = false;
         let searchYearMatchesAssetYear = false;
@@ -105,7 +105,7 @@ $(document).ready(function(){
                     searchYearMatchesAssetYear = true;
                 }
                 else{
-                    searchYearMatchesAssetYear = false;    
+                    searchYearMatchesAssetYear = false;
                 }
             }
             // if search year not provided
@@ -129,8 +129,8 @@ $(document).ready(function(){
             }
 
             // Determine whether or not to display this asset
-            if(searchAssetNameIsSubstringOfAssetName 
-                && searchYearMatchesAssetYear 
+            if(searchAssetNameIsSubstringOfAssetName
+                && searchYearMatchesAssetYear
                 && searchManufacturerMatchesAssetManufacturer
                 && assetPriceWithinSearchPriceRange
             )
@@ -140,14 +140,14 @@ $(document).ready(function(){
             }
         }
 
-        // if there are no assets to display 
+        // if there are no assets to display
         if(searchResultCount === 0){
             $("#errorMessage").text("Your search criteria did not match any assets");
         }
     }
 });
 
-// When the user clicks on an image, this function determines what data to 
+// When the user clicks on an image, this function determines what data to
 // display on the next page
 function setIndexToDisplay(i){
     localStorage.setItem("indexToDisplay", i);
