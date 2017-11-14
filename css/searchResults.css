@@ -13,13 +13,7 @@
   margin-right: 10px;
 }
 
-/* make images uniform size in table */
-#table_body_content img {
-  display: block;
-  height: 100px;
-}
-
 /* Padding between content of cell and borders */
-#table_body_content td {
-  padding: 5px;
-}
+#table_body_content td { 
+   padding: 5px; 
+ } 
