@@ -66,11 +66,11 @@ $(document).ready(function(){
 									"itemMiscNotes": itemMiscNotesField
 								});
 			try{	
-			// insert updated list into localStorage
-			localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
-			
-			// go to confirmation page
-			window.location = "insertNewAssetConfirmation.html";
+				// insert updated list into localStorage
+				localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+				
+				// go to confirmation page
+				window.location = "insertNewAssetConfirmation.html";
 			}
 			catch(DOMException){
 				console.log("Insert Item: Local storage has been maxed out");
@@ -85,7 +85,7 @@ $(document).ready(function(){
 				$("#itemNameSection").addClass("has-error");
 				// Error Message
 				$("#itemNameError").addClass("alert alert-danger");
-				$("#itemNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide an asset name");
+				$("#itemNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
 			}
 			else{
 				// Give input box a green border
@@ -97,8 +97,8 @@ $(document).ready(function(){
 				// Give input box a red border
 				$('#itemPriceSection').addClass("has-error");
 				// Error message
-				$("#assetPriceError").addClass("alert alert-danger");
-				$("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
+				$("#priceValueError").addClass("alert alert-danger");
+				$("#priceValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
 			}
 			else{
 				// Give input box a green border
@@ -120,7 +120,7 @@ $(document).ready(function(){
 				$('#itemYearSection').addClass("has-error");
 				// Error message
 				$("#yearValueError").addClass("alert alert-danger");
-				$("#yearValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the year of purchase");
+				$("#yearValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the year you purchased the asset");
 			}
 			else{
 				$('#itemYearSection').addClass("has-success");
