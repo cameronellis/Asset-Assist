@@ -1,4 +1,4 @@
-  /* Outline all input form boxes black*/
+/* Outline all input form boxes black*/
 .form-control {
   border: 2px solid black;
 }
@@ -11,10 +11,6 @@
 /* Give each icon in the navigation menu spacing */
 .icon {
   margin-right: 10px;
-}
-
-.asterisk {
-	color: red;
 }
 
 /* Font size for the navigation menu */

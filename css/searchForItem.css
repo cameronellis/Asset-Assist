@@ -6,3 +6,8 @@ border: 2px solid black;
 .icon {
   margin-right: 10px;
 }
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
+}

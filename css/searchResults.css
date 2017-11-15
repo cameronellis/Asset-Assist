@@ -16,4 +16,9 @@
 /* Padding between content of cell and borders */
 #table_body_content td { 
    padding: 5px; 
- } 
+} 
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
+}

@@ -7,3 +7,8 @@
 .form-control {
 	border: 2px solid black;	
 }
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
+}

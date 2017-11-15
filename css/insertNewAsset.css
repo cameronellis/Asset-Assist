@@ -18,3 +18,8 @@ img {
 .asterisk {
 	color: red;
 }
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+	font-size: large;
+}

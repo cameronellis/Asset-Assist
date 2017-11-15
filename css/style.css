@@ -1,4 +1,4 @@
-  /* Outline all input form boxes black*/
+/* Outline all input form boxes black*/
 .form-control {
   border: 2px solid black;
 }

@@ -28,7 +28,7 @@ div.panel {
 }
 
 /* User Inserted images */
-img .userImage{
+.userImage{
     height: 200px;
 }
 
@@ -36,4 +36,9 @@ img .userImage{
     display: block;
     margin: 0 auto;
     height: 200px;   
+}
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+    font-size: large;
 }

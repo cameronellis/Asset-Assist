@@ -2,3 +2,8 @@
 .icon {
   margin-right: 10px;
 }
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+	font-size: large;
+}
