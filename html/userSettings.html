@@ -15,40 +15,32 @@
 <body>
 
   <!-- navigation bar -->
-  <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="homepage.html">Asset Management</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-              <p id="usersFullName" class="navigationMenuText navbar-text"></p>
-              <ul class="nav navbar-nav">
-                  <li>
-                    <a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a>
-                  </li>
-                  <li>
-                    <a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
-                  </li>
-                  <li>
-                    <a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Item</a>
-                  </li>
-              </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active">
-                <a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a>
-              </li>
-              <li>
-                <a class="navigationMenuText" href="..\index.html"><span class="icon glyphicon glyphicon-log-in"></span>Log Out</a>
-              </li>
-            </ul>
-          </div>
-      </div>
-  </nav>
+  <nav id="navigationManu" class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle navbar-brand" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon glyphicon glyphicon-menu-hamburger"></span>Menu
+				</button>
+				<a class="navbar-brand" href="#">Asset Management</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<p id="usersFullName" class="navigationMenuText navbar-text"></p>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a>
+					</li>
+					<li>
+						<a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
+					</li>
+					<li><a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Item</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="navigationMenuText" href="userSettings.html"><span class="icon glyphicon glyphicon-cog"></span>Settings</a></li>
+					<li><a class="navigationMenuText" href="..\index.html">    <span class="icon glyphicon glyphicon-log-in"></span>Log Out</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
   <div class="container">
     <div class="page-header">
