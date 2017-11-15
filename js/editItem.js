@@ -105,6 +105,7 @@ $(document).ready(function(){
   });
 });
 
+// Code adapted from: https://stackoverflow.com/questions/6150289/how-to-convert-image-into-base64-string-using-javascript
 function swapOutImage(inputID, imgID){
   let filesSelected = document.getElementById(inputID).files;
   if (filesSelected.length > 0) {

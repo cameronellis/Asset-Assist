@@ -31,6 +31,7 @@ function authenticateUser(){
 	}
 		
 	// Given a String, will determind if String is an email address
+	// Reference: http://www.javascriptkit.com/javatutors/re.shtml
 	function isEmail(email){
 	  let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	  return regex.test(email);	
@@ -195,6 +196,7 @@ $(document).ready(function(){
 	$("#signInButton").click(authenticateUser);
 });
 
+// Reference: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
 $(document).keypress(function(e) {
     if(e.which == 13) {
         authenticateUser();

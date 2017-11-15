@@ -6,7 +6,6 @@ let recentSearches = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_rec
 $(document).ready(function(){
   let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 
-  
   function updateRecentSearches(searchName){
     let numberOfRecentSearchesToDisplay = 4;
     let searchNameNotInRecentSearches = true;

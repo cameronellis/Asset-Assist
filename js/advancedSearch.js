@@ -1,4 +1,5 @@
 // Populates options for the "year of Purchase" fields
+// code taken from: http://jsfiddle.net/s8HaQ/
 let start = new Date().getFullYear();
 let end = 1900;
 let options = "<option></option>";

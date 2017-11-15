@@ -1,5 +1,6 @@
 // Navigate away warning on incomplete form when the user clicks the back button
 // in their browser or when the user tries to close the window
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 window.onbeforeunload = function(){
 	return "leaving this page will reset the fields";
 }

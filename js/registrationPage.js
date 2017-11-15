@@ -1,5 +1,6 @@
 // Navigate away warning on incomplete form when the user clicks the back button
 // in their browser or when the user tries to close the window
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
 window.onbeforeunload = function(){
 	return "leaving this page will reset the fields";
 }
@@ -97,6 +98,7 @@ $(document).ready(function(){
 	});
 
 	// Given a String, will determind if String is an email address
+	// Reference: http://www.javascriptkit.com/javatutors/re.shtml
     function isEmail(email){
       var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
       return regex.test(email); 
