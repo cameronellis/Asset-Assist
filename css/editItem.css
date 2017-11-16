@@ -21,3 +21,8 @@
 .navigationMenuText {
 	font-size: large;
 }
+
+#changeAssetDetailsButton {
+	font-size: x-large;
+	text-align: center;
+}
