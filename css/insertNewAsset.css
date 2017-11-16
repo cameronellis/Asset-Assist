@@ -23,3 +23,8 @@ img {
 .navigationMenuText {
 	font-size: large;
 }
+
+#submitButton {
+	font-size: x-large;
+	text-align: center;
+}
