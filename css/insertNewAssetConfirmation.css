@@ -42,3 +42,12 @@ div.panel {
 .navigationMenuText {
     font-size: large;
 }
+
+/* Center all of the content on the screen */
+#bodyContent {
+    text-align: center;
+}
+
+.bodyButton {
+    font-size: x-large;
+}
