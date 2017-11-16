@@ -6,30 +6,6 @@ let recentSearches = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_rec
 $(document).ready(function(){
   let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 
-  function updateRecentSearches(searchName){
-    let numberOfRecentSearchesToDisplay = 4;
-    let searchNameNotInRecentSearches = true;
-
-    for(let i = 0; i < recentSearches.length; i++){
-      if(searchName === recentSearches[i]){
-        searchNameNotInRecentSearches = false;
-      }
-    }
-
-    if(searchNameNotInRecentSearches){
-      // append to front of array
-      recentSearches.unshift(searchName);
-    }
-
-    if(recentSearches.length > numberOfRecentSearchesToDisplay){
-      // remove last elem
-      recentSearches.pop();
-    }
-
-    // put recent searches back in local storage
-    localStorage.setItem(currentlyLoggedInAs + "_recentSearches", JSON.stringify(recentSearches));
-
-  }
 
   // populate recent searches
   for(let i = 0; i < recentSearches.length; i++){
@@ -43,29 +19,56 @@ $(document).ready(function(){
   $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
   // When the search button is clicked
-  $("#searchButton").click(function(){
-    let searchName = $("#searchName").val();
-
-    // Check if search box is filled
-    if(searchName !== ""){
-      // Update recent searches
-      updateRecentSearches(searchName);
-      // set search query term here
-      localStorage.setItem("searchQuery", searchName);
-      // set search type to basic
-      localStorage.setItem("searchType", "basic");
-      // go to search results page
-      window.location = "searchResults.html";
-    }
-    // else search box is not filled
-    else {
-      // Give input box a red border
-      $("#searchNameSection").addClass("has-error");
-      // Error Message
-      $("#searchNameError").text("Please provide an item name to search");
-    }
-  });
+  $("#searchButton").click(executeBasicSearch);
 });
+
+function updateRecentSearches(searchName){
+  let numberOfRecentSearchesToDisplay = 4;
+  let searchNameNotInRecentSearches = true;
+
+  for(let i = 0; i < recentSearches.length; i++){
+    if(searchName === recentSearches[i]){
+      searchNameNotInRecentSearches = false;
+    }
+  }
+
+  if(searchNameNotInRecentSearches){
+    // append to front of array
+    recentSearches.unshift(searchName);
+  }
+
+  if(recentSearches.length > numberOfRecentSearchesToDisplay){
+    // remove last elem
+    recentSearches.pop();
+  }
+
+  // put recent searches back in local storage
+  localStorage.setItem(currentlyLoggedInAs + "_recentSearches", JSON.stringify(recentSearches));
+
+}
+
+function executeBasicSearch(){
+  let searchName = $("#searchName").val();
+
+  // Check if search box is filled
+  if(searchName !== ""){
+    // Update recent searches
+    updateRecentSearches(searchName);
+    // set search query term here
+    localStorage.setItem("searchQuery", searchName);
+    // set search type to basic
+    localStorage.setItem("searchType", "basic");
+    // go to search results page
+    window.location = "searchResults.html";
+  }
+  // else search box is not filled
+  else {
+    // Give input box a red border
+    $("#searchNameSection").addClass("has-error");
+    // Error Message
+    $("#searchNameError").text("Please provide an item name to search");
+  }
+}
 
 function recentSearchValueIndex(searchIndex){
   // set searchQuery to recent search list item
@@ -75,3 +78,10 @@ function recentSearchValueIndex(searchIndex){
   // go to search results page
   window.location = "searchResults.html";  
 }
+
+// Reference: https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+      executeBasicSearch();
+    }
+});
