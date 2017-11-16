@@ -11,3 +11,8 @@ border: 2px solid black;
 .navigationMenuText {
     font-size: large;
 }
+
+.bodyButton {
+	font-size: x-large;
+	text-align: center;
+}
