@@ -74,6 +74,8 @@ $(document).ready(function(){
 			}
 			catch(DOMException){
 				console.log("Insert Item: Local storage has been maxed out");
+				$("#localStorageOutofSpaceError").addClass("alert alert-danger");
+				$("#localStorageOutofSpaceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Sorry, we don't have enough space to store this asset for you");
 			}
 		}
 
