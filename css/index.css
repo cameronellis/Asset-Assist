@@ -27,3 +27,8 @@
 #authenticationMessage {
 	font-weight: bold;
 }
+
+/* Insert a border around the icons for email and password fields */
+.input-group-addon {
+	border: 2px solid black;
+}
