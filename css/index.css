@@ -13,9 +13,17 @@
 	text-align: center;
 }
 
+#subheader {
+	text-align: center;
+}
+
 /* Center the application logo */
 #logo {
 	display: block;
 	margin: 0 auto;
-	height: 150px;
+	height: 100px;
+}
+
+#authenticationMessage {
+	font-weight: bold;
 }
