@@ -17,3 +17,8 @@
 .navigationMenuText {
 	font-size: large;
 }
+
+#searchButton {
+	text-align: center;
+	font-size: x-large;
+}
