@@ -12,3 +12,8 @@
 	font-size: x-large;
 	text-align: center;
 }
+
+/* Center all of the content on the screen */
+#bodyContent {
+    text-align: center;
+}
