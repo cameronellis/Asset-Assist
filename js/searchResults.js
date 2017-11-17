@@ -1,41 +1,41 @@
 
 $(document).ready(function(){
-    let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-    let users_assets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
-    let searchType = localStorage.getAsset("searchType");
+    let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+    let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
+    let searchType = localStorage.getItem("searchType");
 
     // show who is logged in
-    let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
+    let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
     $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
-    function appendToHTMLTable(assetName, assetPicture, i){
+    function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
             "<tr>" +
                 "<td>" +
                     "<a onclick='setIndexToDisplay(" + i + ")'>" +
-                        "<img src='" + assetPicture + "' width='100' height='100' alt='Asset image' class='img-thumbnail'/>" +
+                        "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" +
                     "</a>" +
                 "</td>" +
-                  "<td><h4>" + assetName + "</h4></td>" +
+                  "<td><h4>" + itemName + "</h4></td>" +
                 "<td>" +
-                    "<a class='btn btn-primary' onclick='setIndexToDisplay(" + i + ")'>Asset Details</a>" +
+                    "<a class='btn btn-primary' onclick='setIndexToDisplay(" + i + ")'>Item Details</a>" +
                 "</td>" +
             "</tr>"
         );
     }
 
     if(searchType === "basic"){
-        let searchQuery = localStorage.getAsset("searchQuery");
+        let searchQuery = localStorage.getItem("searchQuery");
         let searchQueryToLowerCase = searchQuery.toLowerCase();
         let searchResultCount = 0;
 
         // iterate through all of the assts that the users own - filter them through the search query
         for(let i = 0; i < users_assets.length; i++){
-            let assetNameToLowerCase = users_assets[i].assetName.toLowerCase();
+            let itemNameToLowerCase = users_assets[i].itemName.toLowerCase();
 
-            // if the search string is a substring of the asset
-            if(assetNameToLowerCase.indexOf(searchQueryToLowerCase) !== -1){
-                appendToHTMLTable(users_assets[i].assetName, users_assets[i].assetPicture, i);
+            // if the search string is a substring of the item
+            if(itemNameToLowerCase.indexOf(searchQueryToLowerCase) !== -1){
+                appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
                 searchResultCount++;
             }
         }
@@ -47,7 +47,7 @@ $(document).ready(function(){
     }
 
     else if(searchType === "advanced"){
-        let advancedSearchQuery = JSON.parse(localStorage.getAsset("advancedSearchQuery"));
+        let advancedSearchQuery = JSON.parse(localStorage.getItem("advancedSearchQuery"));
 
         let searchAssetNameIsSubstringOfAssetName = false;
         let assetPriceWithinSearchPriceRange = false;
@@ -65,14 +65,14 @@ $(document).ready(function(){
 
         // iterate through all of the assts that the users own - filter them through advanced search query
         for(let i = 0; i < users_assets.length; i++){
-            let assetNameToLowerCase = users_assets[i].assetName.toLowerCase();
-            let assetManufacturerToLowerCase = users_assets[i].assetManufacturer.toLowerCase();
-            let assetPrice = parseInt(users_assets[i].assetPrice);
+            let itemNameToLowerCase = users_assets[i].itemName.toLowerCase();
+            let assetManufacturerToLowerCase = users_assets[i].itemManufacturer.toLowerCase();
+            let itemPrice = parseInt(users_assets[i].itemPrice);
 
             // if asset name provided
             if(advancedSearchQuery.assetName !== ""){
-                // if the search string is a substring of the asset
-                if(assetNameToLowerCase.indexOf(lowerCaseSearchAssetName) !== -1){
+                // if the search string is a substring of the item
+                if(itemNameToLowerCase.indexOf(lowerCaseSearchAssetName) !== -1){
                     searchAssetNameIsSubstringOfAssetName = true;
                 }
                 else{
@@ -86,10 +86,10 @@ $(document).ready(function(){
 
             // if price range provided
             if(advancedSearchQuery.priceRange !== ""){
-                if((assetPrice >= priceRange_lower) && ( assetPrice <= priceRange_upper)){
+                if((itemPrice >= priceRange_lower) && ( itemPrice <= priceRange_upper)){
                     assetPriceWithinSearchPriceRange = true;
                 }
-                // asset not within search range
+                // item not within search range
                 else{
                     assetPriceWithinSearchPriceRange = false;
                 }
@@ -101,7 +101,7 @@ $(document).ready(function(){
 
             // if search year provided
             if(advancedSearchQuery.yearOfPurchase !== ""){
-                if(advancedSearchQuery.yearOfPurchase === users_assets[i].assetYear){
+                if(advancedSearchQuery.yearOfPurchase === users_assets[i].itemYear){
                     searchYearMatchesAssetYear = true;
                 }
                 else{
@@ -135,7 +135,7 @@ $(document).ready(function(){
                 && assetPriceWithinSearchPriceRange
             )
             {
-                appendToHTMLTable(users_assets[i].assetName, users_assets[i].assetPicture, i);
+                appendToHTMLTable(users_assets[i].itemName, users_assets[i].itemPicture, i);
                 searchResultCount++;
             }
         }
@@ -150,6 +150,6 @@ $(document).ready(function(){
 // When the user clicks on an image, this function determines what data to
 // display on the next page
 function setIndexToDisplay(i){
-    localStorage.setAsset("indexToDisplay", i);
-    window.location = "../html/assetDetails.html";
+    localStorage.setItem("indexToDisplay", i);
+    window.location = "../html/itemDetails.html";
 }
