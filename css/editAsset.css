@@ -3,7 +3,7 @@
   border: 2px solid black;
 }
 
-/* Insert a border around the [$] sign in "Price of Asset" */
+/* Insert a border around the [$] sign in "Price of Item" */
 .input-group-addon {
 	border: 2px solid black;
 }
