@@ -9,7 +9,7 @@
 }
 
 /* nagationMenu text is set to ghost white*/
-#navigationMenu a{
+#navigationMenu a, p {
 	color: #F8F8FF;
 }
 
