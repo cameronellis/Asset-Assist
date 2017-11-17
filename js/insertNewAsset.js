@@ -33,8 +33,8 @@ function encodeImageFileAsURL(inputID, newImgID, divID){
 
 $(document).ready(function(){
 	// show who is logged in
-	let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-	let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
+	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 	
 	// When the submit button is clicked
@@ -52,8 +52,8 @@ $(document).ready(function(){
 			&& assetPictureField !== undefined){
 			
 			// retrieve users's list of assets from localStorage
-			let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-			let usersAssets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
+			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+			let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
 
 			// insert the new asset into list of assets
 			usersAssets.push(	{	
