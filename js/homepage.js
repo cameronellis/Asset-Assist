@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	//show who is logged in in the Navigation menu
-	let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-	let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
-	let user_assets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
+	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+	let user_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
 	let numOfAssets = user_assets.length;
 	let assetsSum = 0;
 	
