@@ -33,47 +33,47 @@ function encodeImageFileAsURL(inputID, newImgID, divID){
 
 $(document).ready(function(){
 	// show who is logged in
-	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
-	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+	let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
+	let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 	
 	// When the submit button is clicked
 	$("#submitButton").click(function(){
-		let itemNameField  = $("#itemNameField").val();
-		let itemPriceField = $("#itemPriceField").val();
-		let itemYearField  = $("#year").val();
-		let itemPictureField = $("#assetImg").attr("src");
-		let itemReceiptField = $("#assetReceipt").attr("src");
-		let itemManufacturerField = $("#itemManufacturerField").val();
-		let itemMiscNotesField = $("#itemMiscNotesField").val();
+		let assetNameField  = $("#assetNameField").val();
+		let assetPriceField = $("#assetPriceField").val();
+		let assetYearField  = $("#year").val();
+		let assetPictureField = $("#assetImg").attr("src");
+		let assetReceiptField = $("#assetReceipt").attr("src");
+		let assetManufacturerField = $("#assetManufacturerField").val();
+		let assetMiscNotesField = $("#assetMiscNotesField").val();
 
 		// check if all mandatory forms are filled in...
-		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== undefined){
+		if(assetNameField !== "" && assetPriceField !== "" && assetYearField !== "" 
+			&& assetPictureField !== undefined){
 			
 			// retrieve users's list of assets from localStorage
-			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
-			let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
+			let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
+			let usersAssets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
 
 			// insert the new asset into list of assets
 			usersAssets.push(	{	
-									"itemName": itemNameField,
-									"itemPrice": itemPriceField,
-									"itemYear": itemYearField,
-									"itemPicture": itemPictureField,
-									"itemReceipt": itemReceiptField,
-									"itemManufacturer": itemManufacturerField,
-									"itemMiscNotes": itemMiscNotesField
+									"assetName": assetNameField,
+									"assetPrice": assetPriceField,
+									"assetYear": assetYearField,
+									"assetPicture": assetPictureField,
+									"assetReceipt": assetReceiptField,
+									"assetManufacturer": assetManufacturerField,
+									"assetMiscNotes": assetMiscNotesField
 								});
 			try{	
 				// insert updated list into localStorage
-				localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+				localStorage.setAasset(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
 				
 				// go to confirmation page
 				window.location = "insertNewAssetConfirmation.html";
 			}
 			catch(DOMException){
-				console.log("Insert Item: Local storage has been maxed out");
+				console.log("Insert Asset: Local storage has been maxed out");
 				$("#localStorageOutofSpaceError").addClass("alert alert-danger");
 				$("#localStorageOutofSpaceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Sorry, we don't have enough space to store this asset for you");
 			}
@@ -81,64 +81,64 @@ $(document).ready(function(){
 
 		// All fields not filled in, highlight which ones are and which ones are not
 		else{
-			// If an item name is not given
-			if(itemNameField === ""){
+			// If an asset name is not given
+			if(assetNameField === ""){
 				// Give input box a red border
-				$("#itemNameSection").addClass("has-error");
+				$("#assetNameSection").addClass("has-error");
 				// Error Message
-				$("#itemNameError").addClass("alert alert-danger");
-				$("#itemNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
+				$("#assetNameError").addClass("alert alert-danger");
+				$("#assetNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
 			}
 			else{
 				// Give input box a green border
-				$("#itemNameSection").addClass("has-success");
+				$("#assetNameSection").addClass("has-success");
 			}
 
-			// if an item price is not given
-			if(itemPriceField === ""){
+			// if an asset price is not given
+			if(assetPriceField === ""){
 				// Give input box a red border
-				$('#itemPriceSection').addClass("has-error");
+				$('#assetPriceSection').addClass("has-error");
 				// Error message
 				$("#priceValueError").addClass("alert alert-danger");
 				$("#priceValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
 			}
 			else{
 				// Give input box a green border
-				$('#itemPriceSection').addClass("has-success");
+				$('#assetPriceSection').addClass("has-success");
 			}
 
-			// if value in item price field is not a valid number
-			if(isNaN(itemPriceField)){
+			// if value in asset price field is not a valid number
+			if(isNaN(assetPriceField)){
 				// Give input box a red border
-				$('#itemPriceSection').addClass("has-error");	
+				$('#assetPriceSection').addClass("has-error");	
 				// Error message
 				$("#assetPriceError").addClass("alert alert-danger");
 				$("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a valid price for the asset");
 			}
 
-			// if an item year is not given
-			if(itemYearField === ""){
+			// if an asset year is not given
+			if(assetYearField === ""){
 				// Give input box a red border
-				$('#itemYearSection').addClass("has-error");
+				$('#assetYearSection').addClass("has-error");
 				// Error message
 				$("#yearValueError").addClass("alert alert-danger");
 				$("#yearValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the year you purchased the asset");
 			}
 			else{
-				$('#itemYearSection').addClass("has-success");
+				$('#assetYearSection').addClass("has-success");
 			}
 
-			// if a picture of the item is not given
-			if(itemPictureField === undefined){
+			// if a picture of the asset is not given
+			if(assetPictureField === undefined){
 				// give input box a red border
-				$('#itemPictureSection').addClass("has-error");
+				$('#assetPictureSection').addClass("has-error");
 				// Error message
-				$("#pictureOfItemError").addClass("alert alert-danger");
-				$('#pictureOfItemError').html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a picture of the asset");
+				$("#pictureOfAssetError").addClass("alert alert-danger");
+				$('#pictureOfAssetError').html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a picture of the asset");
 			}
 			else{
 				// give input box a green border
-				$('#itemPictureSection').addClass("has-success");
+				$('#assetPictureSection').addClass("has-success");
 			}	
 		}
 	});
