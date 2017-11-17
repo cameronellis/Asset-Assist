@@ -1,12 +1,12 @@
-let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-let indexToDisplay = localStorage.getAsset("indexToDisplay");
-let usersAssets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
+let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+let indexToDisplay = localStorage.getItem("indexToDisplay");
+let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
 let dataToDisplay = usersAssets[indexToDisplay];
 
 $(document).ready(function(){
 	// show who is logged in
-	let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-	let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
+	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 	
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
@@ -24,7 +24,7 @@ function deleteAsset(){
 	// Delete this asset from user's assets
 	usersAssets.splice(indexToDisplay,1);
 	// Update this user's assset list in localStorage
-	localStorage.setAsset(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+	localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
 	// navigate back to asset search page
 	window.location = "../html/searchForAsset.html";
 }
