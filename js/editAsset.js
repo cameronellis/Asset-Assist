@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
-	let indexToDisplay = localStorage.getItem("indexToDisplay");
-	let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
+	let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
+	let indexToDisplay = localStorage.getAsset("indexToDisplay");
+	let usersAssets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
 	let dataToDisplay = usersAssets[indexToDisplay];
-  let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+  let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
 
   // Populates options for the "Year of Purchase" field
   // code taken from: http://jsfiddle.net/s8HaQ/
@@ -12,7 +12,7 @@ $(document).ready(function(){
   let options = "<option></option>";
 
   for(let year = start ; year >=end; year--){
-    if(year === parseInt(dataToDisplay.itemYear)){
+    if(year === parseInt(dataToDisplay.assetYear)){
       options += "<option selected>"+ year +"</option>";
     }
     else{
@@ -25,39 +25,39 @@ $(document).ready(function(){
   $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
   // Pre-populate fields
-	$("#itemNameField").attr("value", dataToDisplay.itemName);
-  $("#itemImage").attr("src", dataToDisplay.itemPicture);
-  $("#itemReceipt").attr("src", dataToDisplay.itemReceipt);
-	$("#itemPriceField").attr("value", dataToDisplay.itemPrice);
-  $("#itemManufacturerField").attr("value", dataToDisplay.itemManufacturer);
-  $("#itemMiscNotesField").text(dataToDisplay.itemMiscNotes);
+	$("#assetNameField").attr("value", dataToDisplay.assetName);
+  $("#assetImage").attr("src", dataToDisplay.assetPicture);
+  $("#assetReceipt").attr("src", dataToDisplay.assetReceipt);
+	$("#assetPriceField").attr("value", dataToDisplay.assetPrice);
+  $("#assetManufacturerField").attr("value", dataToDisplay.assetManufacturer);
+  $("#assetMiscNotesField").text(dataToDisplay.assetMiscNotes);
 
   // When the submit button is clicked
   $("#changeAssetDetailsButton").click(function(){
-    let itemNameField    = $("#itemNameField").val();
-    let itemPrice        = $("#itemPriceField").val();
-    let itemYear         = $("#yearOfPurchase").val();
-    let itemPicture      = $("#itemImage").attr("src");
-    let itemManufacturer = $("#itemManufacturerField").val();
+    let assetNameField    = $("#assetNameField").val();
+    let assetPrice        = $("#assetPriceField").val();
+    let assetYear         = $("#yearOfPurchase").val();
+    let assetPicture      = $("#assetImage").attr("src");
+    let assetManufacturer = $("#assetManufacturerField").val();
 
     // All mandatory forms are filled in...
-    if( itemNameField !== "" && itemPrice !== "" && itemYear !== "" ){
+    if( assetNameField !== "" && assetPrice !== "" && assetYear !== "" ){
       let newAssetField = { 
-                            itemName: $("#itemNameField").val(), 
-                            itemPrice: $("#itemPriceField").val(),
-                            itemYear: $("#yearOfPurchase").val(), 
-                            itemPicture: $("#itemImage").attr("src"),
-                            itemReceipt: $("#itemReceipt").attr("src"), 
-                            itemManufacturer: $("#itemManufacturerField").val(),
-                            itemMiscNotes: $("#itemMiscNotesField").val()
+                            assetName: $("#assetNameField").val(), 
+                            assetPrice: $("#assetPriceField").val(),
+                            assetYear: $("#yearOfPurchase").val(), 
+                            assetPicture: $("#assetImage").attr("src"),
+                            assetReceipt: $("#assetReceipt").attr("src"), 
+                            assetManufacturer: $("#assetManufacturerField").val(),
+                            assetMiscNotes: $("#assetMiscNotesField").val()
                           }; 
       // update the asset with the new information
       usersAssets[indexToDisplay] = newAssetField;
 
       try{
-        localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
-        // go to item information page
-        window.location = "../html/itemDetails.html";
+        localStorage.setAsset(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+        // go to asset information page
+        window.location = "../html/assetDetails.html";
       }
       // if local storage has been maxed out - display an error message beneath the submit button
       catch(DOMException){
@@ -69,8 +69,8 @@ $(document).ready(function(){
     }   
     // All fields not filled in, highlight which ones are and which ones are not 
     else{
-      // if item name field is not provided
-      if(itemNameField === ""){
+      // if asset name field is not provided
+      if(assetNameField === ""){
         // Give input box a red border
         $("#assetNameSection").addClass("has-error");
         // Error Message
@@ -82,8 +82,8 @@ $(document).ready(function(){
         $("#assetNameSection").addClass("has-success");
       }
 
-      // if item price field is not provided
-      if(itemPrice === ""){
+      // if asset price field is not provided
+      if(assetPrice === ""){
         $("#assetPriceSection").addClass("has-error");
         // Error Message
         $("#assetPriceError").addClass("alert alert-danger");
@@ -93,8 +93,8 @@ $(document).ready(function(){
         $("#assetPriceSection").addClass("has-success");
       }
 
-      // if item year field is not provided
-      if(itemYear === ""){
+      // if asset year field is not provided
+      if(assetYear === ""){
         $("#assetYearSection").addClass("has-error");
         // Error Message
         $("#assetYearError").addClass("alert alert-danger");
