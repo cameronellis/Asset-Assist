@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
-    let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
-    let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
-    let searchType = localStorage.getItem("searchType");
+    let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
+    let users_assets = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_assets"));
+    let searchType = localStorage.getAsset("searchType");
 
     // show who is logged in
-    let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+    let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
     $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
     function appendToHTMLTable(assetName, assetPicture, i){
@@ -25,7 +25,7 @@ $(document).ready(function(){
     }
 
     if(searchType === "basic"){
-        let searchQuery = localStorage.getItem("searchQuery");
+        let searchQuery = localStorage.getAsset("searchQuery");
         let searchQueryToLowerCase = searchQuery.toLowerCase();
         let searchResultCount = 0;
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
     }
 
     else if(searchType === "advanced"){
-        let advancedSearchQuery = JSON.parse(localStorage.getItem("advancedSearchQuery"));
+        let advancedSearchQuery = JSON.parse(localStorage.getAsset("advancedSearchQuery"));
 
         let searchAssetNameIsSubstringOfAssetName = false;
         let assetPriceWithinSearchPriceRange = false;
