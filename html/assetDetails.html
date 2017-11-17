@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Item Details</title>
+    <title>Asset Details</title>
     <!-- Make content easy to view on any size screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Import Bootstrap to make website mobile friendly -->
@@ -9,7 +9,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom CSS -->
-    <link href="../css/itemDetails.css" type="text/css" rel="stylesheet" />
+    <link href="../css/assetDetails.css" type="text/css" rel="stylesheet" />
   </head>
 <body>
 
@@ -28,7 +28,7 @@
                 <li><a class="navigationMenuText" href="homepage.html"><span class="icon glyphicon glyphicon-home"></span>Home</a></li>
                 <li><a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a></li>
                 <li class="active">
-                  <a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Item</a>
+                  <a class="navigationMenuText" href="searchForAsset.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a>
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
@@ -46,30 +46,30 @@
   <div class="container">
     <!-- Asset Name -->
     <div class="page-header">
-      <h1 id="itemName"></h1>
+      <h1 id="assetName"></h1>
     </div>    
 
     <!-- change the width and height attributes later... -->
     <!-- Asset picture -->
-    <img id="itemImage" width="200", height="200"></img>
+    <img id="assetImage" width="200", height="200"></img>
     
     <!-- Asset Price -->
     <h2>Price</h2>
-    <h4 id="itemPrice"></h4>
+    <h4 id="assetPrice"></h4>
     
     <h2>Year of Purchase</h2>
-    <h4 id="itemYear"><h4>
+    <h4 id="assetYear"><h4>
     
     <h2>Manufacturer</h2>
-    <h4 id="itemManufacturer"><h4>
+    <h4 id="assetManufacturer"><h4>
 
     <!-- Asset receipt -->
     <h2>Receipt</h2>
-    <img id="itemReceipt" alt="No receipt provided" width="200" height="200"></img>
+    <img id="assetReceipt" alt="No receipt provided" width="200" height="200"></img>
     
     <!-- Misc. Notes -->
     <h2>Misc. Notes</h2>
-    <h4 id="itemMiscNotes"></h4>
+    <h4 id="assetMiscNotes"></h4>
 
     <br></br>
     <div class="row">
@@ -78,7 +78,7 @@
         <br></br>
       </div>
       <div class="col-sm-4">
-        <a href="editItem.html" class="bodyButtons btn-lg btn-block btn-primary">Edit Asset</a>
+        <a href="editAsset.html" class="bodyButtons btn-lg btn-block btn-primary">Edit Asset</a>
         <br></br>    
       </div>
       <div class="col-sm-4">
@@ -88,7 +88,7 @@
     </div>
   </div>
 
-  <script src="../js/itemDetails.js"></script>
+  <script src="../js/assetDetails.js"></script>
 
 </body>
 </html>
