@@ -11,8 +11,8 @@ document.getElementById("yearOfPurchase").innerHTML = options;
 
 $(document).ready(function() {
   // show who is logged in
-  let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
-  let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
+  let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+  let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
   $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
   // When the search button is clicked
@@ -27,8 +27,8 @@ $(document).ready(function() {
                       };
 
     // update search query
-    localStorage.setAsset("advancedSearchQuery", JSON.stringify(searchQuery));
+    localStorage.setItem("advancedSearchQuery", JSON.stringify(searchQuery));
     // set search type to advanced
-    localStorage.setAsset("searchType", "advanced");
+    localStorage.setItem("searchType", "advanced");
   });
 });
