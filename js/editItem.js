@@ -33,7 +33,7 @@ $(document).ready(function(){
   $("#itemMiscNotesField").text(dataToDisplay.itemMiscNotes);
 
   // When the submit button is clicked
-  $("#submitButton").click(function(){
+  $("#changeAssetDetailsButton").click(function(){
     let itemNameField    = $("#itemNameField").val();
     let itemPrice        = $("#itemPriceField").val();
     let itemYear         = $("#yearOfPurchase").val();
