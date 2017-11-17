@@ -1,10 +1,10 @@
 // show who is logged in
-let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
+let currentlyLoggedInAs = localStorage.getAsset("currentlyLoggedInAs");
 // retrieve recent searches from local storage
-let recentSearches = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_recentSearches"));
+let recentSearches = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_recentSearches"));
   
 $(document).ready(function(){
-  let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+  let userData = JSON.parse(localStorage.getAsset(currentlyLoggedInAs + "_userdata"));
 
 
   // populate recent searches
@@ -43,7 +43,7 @@ function updateRecentSearches(searchName){
   }
 
   // put recent searches back in local storage
-  localStorage.setItem(currentlyLoggedInAs + "_recentSearches", JSON.stringify(recentSearches));
+  localStorage.setAsset(currentlyLoggedInAs + "_recentSearches", JSON.stringify(recentSearches));
 
 }
 
@@ -55,9 +55,9 @@ function executeBasicSearch(){
     // Update recent searches
     updateRecentSearches(searchName);
     // set search query term here
-    localStorage.setItem("searchQuery", searchName);
+    localStorage.setAsset("searchQuery", searchName);
     // set search type to basic
-    localStorage.setItem("searchType", "basic");
+    localStorage.setAsset("searchType", "basic");
     // go to search results page
     window.location = "searchResults.html";
   }
@@ -72,9 +72,9 @@ function executeBasicSearch(){
 
 function recentSearchValueIndex(searchIndex){
   // set searchQuery to recent search list asset
-  localStorage.setItem("searchQuery", recentSearches[searchIndex]);
+  localStorage.setAsset("searchQuery", recentSearches[searchIndex]);
   // set search type to basic
-  localStorage.setItem("searchType", "basic");
+  localStorage.setAsset("searchType", "basic");
   // go to search results page
   window.location = "searchResults.html";  
 }
