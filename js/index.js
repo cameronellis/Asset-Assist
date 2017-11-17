@@ -48,24 +48,24 @@ function authenticateUser(){
 			// populate account with fake data
 			assets = [
 						{
-							itemName:"ACER computer monitor", itemPrice:"600", itemYear:"2015",
-							itemPicture:"https://goo.gl/EpK23A", itemReceipt:"https://goo.gl/xtTnZi",
-							itemManufacturer:"ACER", itemMiscNotes:"My new computer monitor!"								
+							assetName:"ACER computer monitor", assetPrice:"600", assetYear:"2015",
+							assetPicture:"https://goo.gl/EpK23A", assetReceipt:"https://goo.gl/xtTnZi",
+							assetManufacturer:"ACER", assetMiscNotes:"My new computer monitor!"								
 						},
 						{
-							itemName:"old computer monitor", itemPrice:"40", itemYear:"1997",
-							itemPicture:"https://goo.gl/emRYCT", itemReceipt:"https://goo.gl/4Gbu1H",
-							itemManufacturer:"HP", itemMiscNotes:"Picked this up from my grandpa"
+							assetName:"old computer monitor", assetPrice:"40", assetYear:"1997",
+							assetPicture:"https://goo.gl/emRYCT", assetReceipt:"https://goo.gl/4Gbu1H",
+							assetManufacturer:"HP", assetMiscNotes:"Picked this up from my grandpa"
 						},
 						{
-							itemName:"keyboard", itemPrice:"60", itemYear:"2013",
-							itemPicture:"https://goo.gl/6SW45B", itemReceipt:"https://goo.gl/3hZ1QU",
-							itemManufacturer:"ACER", itemMiscNotes:"bought this on newegg"
+							assetName:"keyboard", assetPrice:"60", assetYear:"2013",
+							assetPicture:"https://goo.gl/6SW45B", assetReceipt:"https://goo.gl/3hZ1QU",
+							assetManufacturer:"ACER", assetMiscNotes:"bought this on newegg"
 						},
 						{
-							itemName:"laptop", itemPrice:"750", itemYear:"2015",
-							itemPicture:"https://goo.gl/t8dFmP", itemReceipt:"https://goo.gl/8Dv6eG",
-							itemManufacturer:"HP", itemMiscNotes:""
+							assetName:"laptop", assetPrice:"750", assetYear:"2015",
+							assetPicture:"https://goo.gl/t8dFmP", assetReceipt:"https://goo.gl/8Dv6eG",
+							assetManufacturer:"HP", assetMiscNotes:""
 						}
 					];
 		}
@@ -83,56 +83,56 @@ function authenticateUser(){
 			// populate account with fake data
 			assets = [
 						{	
-							itemName:"Purple couch", itemPrice:"1200", itemYear:"2000", 
-							itemPicture:"https://goo.gl/KuZ75L", itemReceipt:"https://goo.gl/xtTnZi", 
-							itemManufacturer:"Ikea", itemMiscNotes:"Some misc notes"
+							assetName:"Purple couch", assetPrice:"1200", assetYear:"2000", 
+							assetPicture:"https://goo.gl/KuZ75L", assetReceipt:"https://goo.gl/xtTnZi", 
+							assetManufacturer:"Ikea", assetMiscNotes:"Some misc notes"
 						},
 						{
-							itemName:"Blue couch", itemPrice:"2000", itemYear:"2017",
-							itemPicture:"https://goo.gl/kfF5tT", itemReceipt:"https://goo.gl/4Gbu1H",
-							itemManufacturer:"Living Spaces", itemMiscNotes:"This couch is in my living room"
+							assetName:"Blue couch", assetPrice:"2000", assetYear:"2017",
+							assetPicture:"https://goo.gl/kfF5tT", assetReceipt:"https://goo.gl/4Gbu1H",
+							assetManufacturer:"Living Spaces", assetMiscNotes:"This couch is in my living room"
 						},
 						{
-							itemName:"Black Couch", itemPrice:"1500", itemYear:"1994",
-							itemPicture:"https://goo.gl/qqpXRp", itemReceipt:"https://goo.gl/3hZ1QU",
-							itemManufacturer:"Wal-Mart", itemMiscNotes:"This was a wedding gift"
+							assetName:"Black Couch", assetPrice:"1500", assetYear:"1994",
+							assetPicture:"https://goo.gl/qqpXRp", assetReceipt:"https://goo.gl/3hZ1QU",
+							assetManufacturer:"Wal-Mart", assetMiscNotes:"This was a wedding gift"
 						},
 						{
-							itemName:"Brown grandfather clock", itemPrice:"1600", itemYear:"1901",
-							itemPicture:"https://goo.gl/YdeacM", itemReceipt:"https://goo.gl/8Dv6eG",
-							itemManufacturer:"Target", itemMiscNotes:"I got this from my sister"
+							assetName:"Brown grandfather clock", assetPrice:"1600", assetYear:"1901",
+							assetPicture:"https://goo.gl/YdeacM", assetReceipt:"https://goo.gl/8Dv6eG",
+							assetManufacturer:"Target", assetMiscNotes:"I got this from my sister"
 						},
 						{
-							itemName:"Toy grandfather clock christmas ornament", itemPrice:"2.99", itemYear:"2002",
-							itemPicture:"https://goo.gl/6c9rdo", itemReceipt:"https://goo.gl/xtTnZi",
-							itemManufacturer:"Ikea", itemMiscNotes:""
+							assetName:"Toy grandfather clock christmas ornament", assetPrice:"2.99", assetYear:"2002",
+							assetPicture:"https://goo.gl/6c9rdo", assetReceipt:"https://goo.gl/xtTnZi",
+							assetManufacturer:"Ikea", assetMiscNotes:""
 						},
 						{
-							itemName:"Yellow grandfather clock", itemPrice:"299.99", itemYear:"2016",
-							itemPicture:"https://goo.gl/3LznTK", itemReceipt:"https://goo.gl/4Gbu1H",
-							itemManufacturer:"Sears", itemMiscNotes:"I got this from my brother"
+							assetName:"Yellow grandfather clock", assetPrice:"299.99", assetYear:"2016",
+							assetPicture:"https://goo.gl/3LznTK", assetReceipt:"https://goo.gl/4Gbu1H",
+							assetManufacturer:"Sears", assetMiscNotes:"I got this from my brother"
 						},
 						{
-							itemName:"Small black coffee table", itemPrice:"29.99", itemYear:"2014",
-							itemPicture:"https://goo.gl/nVT5Cx", itemReceipt:"https://goo.gl/3hZ1QU",
-							itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"I won this in a raffle"
+							assetName:"Small black coffee table", assetPrice:"29.99", assetYear:"2014",
+							assetPicture:"https://goo.gl/nVT5Cx", assetReceipt:"https://goo.gl/3hZ1QU",
+							assetManufacturer:"Dale's Table Emporeum", assetMiscNotes:"I won this in a raffle"
 						},
 						{
-							itemName:"brown circular dining table", itemPrice:"1299.99", itemYear:"1927",
-							itemPicture:"https://goo.gl/QdKgLC", itemReceipt:"https://goo.gl/8Dv6eG",
-							itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"This is in my dining room"
+							assetName:"brown circular dining table", assetPrice:"1299.99", assetYear:"1927",
+							assetPicture:"https://goo.gl/QdKgLC", assetReceipt:"https://goo.gl/8Dv6eG",
+							assetManufacturer:"Dale's Table Emporeum", assetMiscNotes:"This is in my dining room"
 						},
 						{
-							itemName:"light brown study table", itemPrice:"300.00", itemYear:"2006",
-							itemPicture:"https://goo.gl/sxB8YW", itemReceipt:"https://goo.gl/xtTnZi",
-							itemManufacturer:"Sears", itemMiscNotes:""
+							assetName:"light brown study table", assetPrice:"300.00", assetYear:"2006",
+							assetPicture:"https://goo.gl/sxB8YW", assetReceipt:"https://goo.gl/xtTnZi",
+							assetManufacturer:"Sears", assetMiscNotes:""
 						}
 					];
 		}
 
-		localStorage.setItem(email + "_userdata"      , JSON.stringify(person));
-		localStorage.setItem(email + "_assets"        , JSON.stringify(assets));
-		localStorage.setItem(email + "_recentSearches", JSON.stringify(recentSearches));
+		localStorage.setAsset(email + "_userdata"      , JSON.stringify(person));
+		localStorage.setAsset(email + "_assets"        , JSON.stringify(assets));
+		localStorage.setAsset(email + "_recentSearches", JSON.stringify(recentSearches));
 	}
 
 	// The user is allowed to log in
@@ -142,7 +142,7 @@ function authenticateUser(){
 		&& isValidEmailAccount(loginEmailField, loginPasswordField))
 	{
 		// indicate who is logging in
-		localStorage.setItem("currentlyLoggedInAs", loginEmailField);
+		localStorage.setAsset("currentlyLoggedInAs", loginEmailField);
 		// initialize data for this user
 		initializeUserData(loginEmailField);
 		window.location = "html/homepage.html";
