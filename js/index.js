@@ -130,9 +130,9 @@ function authenticateUser(){
 					];
 		}
 
-		localStorage.setAsset(email + "_userdata"      , JSON.stringify(person));
-		localStorage.setAsset(email + "_assets"        , JSON.stringify(assets));
-		localStorage.setAsset(email + "_recentSearches", JSON.stringify(recentSearches));
+		localStorage.setItem(email + "_userdata"      , JSON.stringify(person));
+		localStorage.setItem(email + "_assets"        , JSON.stringify(assets));
+		localStorage.setItem(email + "_recentSearches", JSON.stringify(recentSearches));
 	}
 
 	// The user is allowed to log in
@@ -142,7 +142,7 @@ function authenticateUser(){
 		&& isValidEmailAccount(loginEmailField, loginPasswordField))
 	{
 		// indicate who is logging in
-		localStorage.setAsset("currentlyLoggedInAs", loginEmailField);
+		localStorage.setItem("currentlyLoggedInAs", loginEmailField);
 		// initialize data for this user
 		initializeUserData(loginEmailField);
 		window.location = "html/homepage.html";
