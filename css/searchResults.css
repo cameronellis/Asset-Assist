@@ -22,3 +22,12 @@
 .navigationMenuText {
     font-size: large;
 }
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/*Burger icon and "menu" text in button color is ghostwhite*/
+#menuButton {
+	color: #F8F8FF;
+}
