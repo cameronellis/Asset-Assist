@@ -8,8 +8,13 @@
 	font-size: large;
 }
 
-/* nagationMenu text is set to ghost white*/
-#navigationMenu a, p {
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/* User's full name text is set to ghost white */
+#usersFullName {
 	color: #F8F8FF;
 }
 
