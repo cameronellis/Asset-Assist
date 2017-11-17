@@ -3,9 +3,13 @@
   margin-right: 10px;
 }
 
-/* Font size and color for the navigation menu */
+/* Font size for the navigation menu */
 .navigationMenuText {
 	font-size: large;
+}
+
+/* nagationMenu text is set to ghost white*/
+#navigationMenu {
 	color: #F8F8FF;
 }
 
