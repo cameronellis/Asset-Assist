@@ -31,7 +31,7 @@
 	                	<a class="navigationMenuText" href="insertNewAsset.html"><span class="icon glyphicon glyphicon-plus"></span>Insert Asset</a>
 	                </li>
 					<li>
-						<a class="navigationMenuText" href="searchForItem.html"><span class="icon glyphicon glyphicon-search"></span>Search for Item</a>
+						<a class="navigationMenuText" href="searchForAsset.html"><span class="icon glyphicon glyphicon-search"></span>Search for Asset</a>
 					</li>
 	            </ul>
 		        <ul class="nav navbar-nav navbar-right">
@@ -54,45 +54,45 @@
 
 		<h3><span class="asterisk">*</span> Indicates a required field</h3>
 
-		<div id="itemNameSection">
-			<h2>Item Name <span class="asterisk">*</span></h2>
-			<input id="itemNameField" class="form-control input-lg"></input>
-			<div id="itemNameError"></div>
+		<div id="assetNameSection">
+			<h2>Asset Name <span class="asterisk">*</span></h2>
+			<input id="assetNameField" class="form-control input-lg"></input>
+			<div id="assetNameError"></div>
 		</div>
 
-		<div id="itemPictureSection">
-			<h2>Picture of Item <span class="asterisk">*</span></h2>
-			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemPictureField" onchange="encodeImageFileAsURL('itemPictureField', 'assetImg', 'assetImgDiv')"></input>
+		<div id="assetPictureSection">
+			<h2>Picture of Asset <span class="asterisk">*</span></h2>
+			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="assetPictureField" onchange="encodeImageFileAsURL('assetPictureField', 'assetImg', 'assetImgDiv')"></input>
 			<div id="assetImgDiv"></div>
-			<div id="pictureOfItemError"></div>
+			<div id="pictureOfAssetError"></div>
 			<div class="alert alert-warning">
 				<strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
 			</div>
 		</div>
 
-		<div id="itemPriceSection">
-			<h2>Price of Item <span class="asterisk">*</span></h2>
+		<div id="assetPriceSection">
+			<h2>Price of Asset <span class="asterisk">*</span></h2>
 			<div class="input-group">
 			    <div class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></div>
-			    <input type="number" class="form-control input-lg" id="itemPriceField" placeholder="Amount"></input>
+			    <input type="number" class="form-control input-lg" id="assetPriceField" placeholder="Amount"></input>
 			</div>
 			<div id="priceValueError"></div>
 		</div>
 
-		<div id="itemYearSection">
+		<div id="assetYearSection">
 			<h2>Year of Purchase <span class="asterisk">*</span></h2>
 			<select class="form-control input-lg" id="year"></select>
 			<div class="help-block" id="yearValueError"></div>
 		</div>
 
-		<div id="itemManufacturerSection">	
+		<div id="assetManufacturerSection">	
 			<h2>Manufacturer </h2>
-			<input type="text" class="form-control input-lg" id="itemManufacturerField"></input>
+			<input type="text" class="form-control input-lg" id="assetManufacturerField"></input>
 		</div>
 
-		<div id="itemReceiptSection">
+		<div id="assetReceiptSection">
 			<h2>Picture of Receipt</h2>
-			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptField" onchange="encodeImageFileAsURL('itemReceiptField', 'assetReceipt', 'assetReceiptDiv')"></input>
+			<input type="file" class="form-control input-lg" name="pic" accept="image/*" id="assetReceiptField" onchange="encodeImageFileAsURL('assetReceiptField', 'assetReceipt', 'assetReceiptDiv')"></input>
 			<div id="assetReceiptDiv"></div>
 			<div class="alert alert-warning">
 				<strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
@@ -100,10 +100,10 @@
 		</div>
 
 		<h2>Misc. Notes</h2>
-		<textarea class="form-control input-lg" rows="5" id="itemMiscNotesField"></textarea>
+		<textarea class="form-control input-lg" rows="5" id="assetMiscNotesField"></textarea>
 		<br></br>
 
-		<a class="btn-lg btn-success btn-block" id="submitButton">Submit Item</a>
+		<a class="btn-lg btn-success btn-block" id="submitButton">Submit Asset</a>
 		<br></br>
 		<div id="localStorageOutofSpaceError"></div>
 	</div>
