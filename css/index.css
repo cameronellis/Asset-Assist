@@ -32,3 +32,13 @@
 .input-group-addon {
 	border: 2px solid black;
 }
+
+/* Give each icon spacing */
+.icon {
+  margin-right: 10px;
+}
+
+.buttonText {
+	text-align: center;
+	font-size: x-large;
+}
