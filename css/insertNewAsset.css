@@ -21,11 +21,14 @@ img {
 
 /* Font size for the navigation menu */
 .navigationMenuText {
-	font-size: large;
+	font-size: x-large;
 }
 
-/* navigationMenu text is set to ghost white*/
+/* navigationMenu text and links are set to ghost white*/
 #navigationMenu a {
+	color: #F8F8FF;
+}
+#navigationMenu p {
 	color: #F8F8FF;
 }
 
