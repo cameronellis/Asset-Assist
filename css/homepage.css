@@ -18,6 +18,11 @@
 	color: #F8F8FF;
 }
 
+/* usersFullName changed to ghost white in nav bar */
+#myNavBar p {
+	color: #F8F8FF;
+}
+
 .bodyButtons{
 	font-size: x-large;
 	text-align: center;
