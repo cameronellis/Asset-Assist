@@ -37,6 +37,18 @@ img {
 	color: #F8F8FF;
 }
 
+/* links are gray when hovered upon */
+#navigationMenu a:hover {
+	color: #808080;
+}
+
+/* menu button is gray when hovered*/
+#menuButton:hover {
+	color: #F8F8FF;
+}
+
+
+
 #submitButton {
 	font-size: x-large;
 	text-align: center;
