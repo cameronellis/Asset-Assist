@@ -18,6 +18,11 @@
 	color: #F8F8FF;
 }
 
+/* usersFullName is set ghost white in nav bar */
+#navigationMenu p {
+	color: #F8F8FF;
+}
+
 /*Burger icon and "menu" text in button color is ghostwhite*/
 #menuButton {
 	color: #F8F8FF;
