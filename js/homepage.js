@@ -18,4 +18,9 @@ $(document).ready(function(){
 		assetsSum += parseInt(user_assets[i].itemPrice);
 	}	
 	$("#totalValue").text("Total value of all assets: $" + assetsSum);
+
+	$("#viewAllAssetsButton").click(function(){
+		localStorage.setItem("searchQuery","");
+		window.location = "../html/searchResults.html"
+	});
 });
