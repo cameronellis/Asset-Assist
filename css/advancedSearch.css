@@ -23,8 +23,18 @@
 	color: #F8F8FF;
 }
 
+/* links are gray when hovered upon */
+#navigationMenu a:hover {
+	color: #808080;
+}
+
 /* usersFullName changed to ghost white in nav bar */
 #navigationMenu p {
+	color: #F8F8FF;
+}
+
+/* menu button is gray when hovered*/
+#menuButton:hover {
 	color: #F8F8FF;
 }
 

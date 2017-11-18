@@ -23,6 +23,16 @@
 	color: #F8F8FF;
 }
 
+/* links are gray when hovered upon */
+#navigationMenu a:hover {
+	color: #808080;
+}
+
+/* menu button is gray when hovered*/
+#menuButton:hover {
+	color: #F8F8FF;
+}
+
 /*Burger icon and "menu" text in button color is ghostwhite*/
 #menuButton {
 	color: #F8F8FF;
