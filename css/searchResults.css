@@ -56,7 +56,12 @@
 	border: solid;
 }
 
+/* Output table */
 table {
 	width: 100%;
+	text-align: center;
+}
+
+#headerText {
 	text-align: center;
 }
