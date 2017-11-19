@@ -38,7 +38,6 @@
 	color: #F8F8FF;
 }
 
-
 .bodyButton {
 	font-size: x-large;
 	text-align: center;
@@ -46,3 +45,6 @@
 	border-color: #333333;
 }
 
+#headerText {
+	text-align: center;
+}

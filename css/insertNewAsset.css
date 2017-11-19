@@ -47,8 +47,6 @@ img {
 	color: #F8F8FF;
 }
 
-
-
 #submitButton {
 	font-size: x-large;
 	text-align: center;
@@ -62,4 +60,8 @@ img {
 	
 	border-style: solid;
 	border-color: #333333;
+}
+
+#headerText {
+	text-align: center;
 }

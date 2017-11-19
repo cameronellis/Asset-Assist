@@ -44,3 +44,7 @@ border: 2px solid black;
 	border: solid;
 	border-color: #333333;
 }
+
+#headerText {
+	text-align: center;
+}
