@@ -84,27 +84,35 @@ $(document).ready(function(){
 			// If an item name is not given
 			if(itemNameField === ""){
 				// Give input box a red border
-				$("#itemNameSection").addClass("has-error");
+				$("#itemNameSection").attr("class","has-error");
+
 				// Error Message
 				$("#itemNameError").addClass("alert alert-danger");
 				$("#itemNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
 			}
 			else{
 				// Give input box a green border
-				$("#itemNameSection").addClass("has-success");
+				$("#itemNameSection").attr("class","has-success");
+
+				// Remove the error message from the page
+				$("#itemNameError").attr("class","");
+				$("#itemNameError").html("");
 			}
 
 			// if an item price is not given
 			if(itemPriceField === ""){
 				// Give input box a red border
-				$('#itemPriceSection').addClass("has-error");
+				$('#itemPriceSection').attr("class","has-error");
 				// Error message
-				$("#priceValueError").addClass("alert alert-danger");
+				$("#priceValueError").attr("class","alert alert-danger");
 				$("#priceValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
 			}
 			else{
 				// Give input box a green border
-				$('#itemPriceSection').addClass("has-success");
+				$('#itemPriceSection').attr("class","has-success");
+				
+				$("#priceValueError").attr("class","");
+				$("#priceValueError").html("");				
 			}
 
 			// if value in item price field is not a valid number
@@ -119,21 +127,30 @@ $(document).ready(function(){
 			// if an item year is not given
 			if(itemYearField === ""){
 				// Give input box a red border
-				$('#itemYearSection').addClass("has-error");
+				$('#itemYearSection').attr("class", "has-error");
+				
 				// Error message
-				$("#yearValueError").addClass("alert alert-danger");
+				// Gives error text a red background field
+				$("#yearValueError").attr("class","alert alert-danger");
+				// Error text
 				$("#yearValueError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the year you purchased the asset");
 			}
 			else{
-				$('#itemYearSection').addClass("has-success");
+				// Give input box a green border
+				$('#itemYearSection').attr("class", "has-success");
+
+				// Remove the error message from the page
+				$("#yearValueError").attr("class","");
+				$("#yearValueError").html("");
 			}
 
 			// if a picture of the item is not given
 			if(itemPictureField === undefined){
 				// give input box a red border
-				$('#itemPictureSection').addClass("has-error");
+				$('#itemPictureSection').attr("class","has-error");
+				
 				// Error message
-				$("#pictureOfItemError").addClass("alert alert-danger");
+				$("#pictureOfItemError").attr("class","alert alert-danger");
 				$('#pictureOfItemError').html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a picture of the asset");
 			}
 			else{
