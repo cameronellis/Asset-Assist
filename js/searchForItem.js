@@ -6,7 +6,6 @@ let recentSearches = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_rec
 $(document).ready(function(){
   let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 
-
   // populate recent searches
   for(let i = 0; i < recentSearches.length; i++){
     $("#recentSearchesSection").append(
@@ -14,6 +13,11 @@ $(document).ready(function(){
         "<h3>" + recentSearches[i] + "</h3>" + 
       "</a>");
   }
+
+  $("#viewAllAssetsButton").click(function(){
+    localStorage.setItem("searchQuery","");
+    window.location = "../html/searchResults.html";
+  });
 
   // display who is currently logged in
   $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
