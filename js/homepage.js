@@ -21,6 +21,6 @@ $(document).ready(function(){
 
 	$("#viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
-		window.location = "../html/searchResults.html"
+		window.location = "../html/searchResults.html";
 	});
 });
