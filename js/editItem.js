@@ -112,6 +112,9 @@ $(document).ready(function(){
         $("#assetYearError").attr("class","");
         $("#assetYearError").html("");        
       }
+
+      $("#submissionErrorMessage").addClass("alert alert-danger");
+      $("#submissionErrorMessage").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Sorry, but before we can edit your asset, you must resolve the errors above");
     }
   });
 });
