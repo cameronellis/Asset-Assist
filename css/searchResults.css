@@ -55,3 +55,8 @@
 	border-color: #333333;
 	border: solid;
 }
+
+table {
+	width: 100%;
+	text-align: center;
+}
