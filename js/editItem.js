@@ -72,36 +72,45 @@ $(document).ready(function(){
       // if item name field is not provided
       if(itemNameField === ""){
         // Give input box a red border
-        $("#assetNameSection").addClass("has-error");
+        $("#assetNameSection").attr("class","has-error");
+
         // Error Message
-        $("#assetNameError").addClass("alert alert-danger");
+        $("#assetNameError").attr("class","alert alert-danger");
         $("#assetNameError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's name");
       }
       else{
-        // Give input box a green border
-        $("#assetNameSection").addClass("has-success");
+        $("#assetNameSection").attr("class","");
+        // Remove error message
+        $("#assetNameError").attr("class","");
+        $("#assetNameError").html("");        
       }
 
       // if item price field is not provided
       if(itemPrice === ""){
-        $("#assetPriceSection").addClass("has-error");
+        $("#assetPriceSection").attr("class","has-error");
         // Error Message
-        $("#assetPriceError").addClass("alert alert-danger");
+        $("#assetPriceError").attr("class","alert alert-danger");
         $("#assetPriceError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's price");
       }
       else{
-        $("#assetPriceSection").addClass("has-success");
+        $("#assetPriceSection").attr("class","");
+        // Remove error message
+        $("#assetPriceError").attr("class","");
+        $("#assetPriceError").html("");
       }
 
       // if item year field is not provided
       if(itemYear === ""){
-        $("#assetYearSection").addClass("has-error");
+        $("#assetYearSection").attr("class","has-error");
         // Error Message
-        $("#assetYearError").addClass("alert alert-danger");
+        $("#assetYearError").attr("class","alert alert-danger");
         $("#assetYearError").html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide the asset's year of purchase");
       }
       else{
-        $("#assetYearSection").addClass("has-success");
+        $("#assetYearSection").attr("class","");
+        // Remove error message
+        $("#assetYearError").attr("class","");
+        $("#assetYearError").html("");        
       }
     }
   });
