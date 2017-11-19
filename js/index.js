@@ -96,36 +96,6 @@ function authenticateUser(){
 							itemName:"Black Couch", itemPrice:"1500", itemYear:"1994",
 							itemPicture:"https://goo.gl/qqpXRp", itemReceipt:"https://goo.gl/3hZ1QU",
 							itemManufacturer:"Wal-Mart", itemMiscNotes:"This was a wedding gift"
-						},
-						{
-							itemName:"Brown grandfather clock", itemPrice:"1600", itemYear:"1901",
-							itemPicture:"https://goo.gl/YdeacM", itemReceipt:"https://goo.gl/8Dv6eG",
-							itemManufacturer:"Target", itemMiscNotes:"I got this from my sister"
-						},
-						{
-							itemName:"Toy grandfather clock christmas ornament", itemPrice:"2.99", itemYear:"2002",
-							itemPicture:"https://goo.gl/6c9rdo", itemReceipt:"https://goo.gl/xtTnZi",
-							itemManufacturer:"Ikea", itemMiscNotes:""
-						},
-						{
-							itemName:"Yellow grandfather clock", itemPrice:"299.99", itemYear:"2016",
-							itemPicture:"https://goo.gl/3LznTK", itemReceipt:"https://goo.gl/4Gbu1H",
-							itemManufacturer:"Sears", itemMiscNotes:"I got this from my brother"
-						},
-						{
-							itemName:"Small black coffee table", itemPrice:"29.99", itemYear:"2014",
-							itemPicture:"https://goo.gl/nVT5Cx", itemReceipt:"https://goo.gl/3hZ1QU",
-							itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"I won this in a raffle"
-						},
-						{
-							itemName:"brown circular dining table", itemPrice:"1299.99", itemYear:"1927",
-							itemPicture:"https://goo.gl/QdKgLC", itemReceipt:"https://goo.gl/8Dv6eG",
-							itemManufacturer:"Dale's Table Emporeum", itemMiscNotes:"This is in my dining room"
-						},
-						{
-							itemName:"light brown study table", itemPrice:"300.00", itemYear:"2006",
-							itemPicture:"https://goo.gl/sxB8YW", itemReceipt:"https://goo.gl/xtTnZi",
-							itemManufacturer:"Sears", itemMiscNotes:""
 						}
 					];
 		}
