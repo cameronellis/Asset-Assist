@@ -40,4 +40,7 @@ border: 2px solid black;
 .bodyButton {
 	font-size: x-large;
 	text-align: center;
+	color: #333333;
+	border: solid;
+	border-color: #333333;
 }

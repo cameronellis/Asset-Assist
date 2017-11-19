@@ -33,11 +33,14 @@
 	color: #F8F8FF;
 }
 
-
-
 .bodyButtons{
 	font-size: x-large;
 	text-align: center;
+	/* font color */
+	color: #333333;
+	
+	border-style: solid;
+	border-color: #333333;
 }
 
 /* Center all of the content on the screen */

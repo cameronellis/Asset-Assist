@@ -76,4 +76,10 @@ div.panel {
 
 .bodyButton {
     font-size: x-large;
+    text-align: center;
+    /* font color */
+    color: #333333;
+    
+    border-style: solid;
+    border-color: #333333;
 }

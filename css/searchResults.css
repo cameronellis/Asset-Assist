@@ -43,9 +43,15 @@
 	color: #F8F8FF;
 }
 
-
-
 /*Burger icon and "menu" text in button color is ghostwhite*/
 #menuButton {
 	color: #F8F8FF;
+}
+
+.buttonText {
+	text-align: center;
+	font-size: large;
+	color: #333333;
+	border-color: #333333;
+	border: solid;
 }

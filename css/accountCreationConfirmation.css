@@ -1,8 +1,3 @@
-/* Make the input fields have a bolder border*/
-.form-control {
-	border: 2px solid black;	
-}
-
 .bodyButtons{
 	font-size: x-large;
 	text-align: center;
