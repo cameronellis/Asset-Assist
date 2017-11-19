@@ -44,3 +44,8 @@
     /* font color */
     color: #333333;
 }
+
+/* Center all of the content on the screen */
+#bodyContent {
+    text-align: center;
+}
