@@ -18,8 +18,6 @@ $(document).ready(function(){
 		assetsSum += parseInt(user_assets[i].itemPrice);
 	}	
 	$("#totalValue").text("Total value of all assets: $" + assetsSum);
-                  
-    $("#scrollMessage").text("Scroll Down For Options.");
 
 	$("#viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
