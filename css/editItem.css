@@ -60,3 +60,21 @@ img{
 	display: block;
 	margin: 10px auto;
 }
+
+/* Set error messages font to 18px */
+#assetNameError {
+	font-size: 18px;
+}
+
+#assetPriceError {
+	font-size: 18px;
+}
+
+#assetYearError {
+	font-size: 18px;
+}
+
+#submissionErrorMessage {
+	font-size: 18px;
+}
+
