@@ -48,3 +48,8 @@ border: 2px solid black;
 #headerText {
 	text-align: center;
 }
+
+/* Set error message to 18 px font */
+#searchNameError {
+	font-size: 18px;
+}
