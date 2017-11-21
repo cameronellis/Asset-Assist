@@ -67,3 +67,24 @@ img {
 #headerText {
 	text-align: center;
 }
+
+/* Make erroor messages' font size: 18pixes */
+#itemNameError {
+    font-size: 18px;
+}
+
+#pictureOfItemError {
+    font-size: 18px;
+}
+
+#priceValueError {
+    font-size: 18px;
+}
+
+#yearValueError {
+    font-size: 18px;
+}
+
+#submissionErrorMessage {
+    font-size: 18px;
+}
