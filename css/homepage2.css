@@ -1,0 +1,67 @@
+/* Give each icon spacing */
+.icon {
+  margin-right: 10px;
+}
+
+/* Font size for the navigation menu */
+.navigationMenuText {
+	font-size: large;
+}
+
+/* navigationMenu text is set to ghost white*/
+#navigationMenu a {
+	color: #F8F8FF;
+}
+
+/* usersFullName changed to ghost white in nav bar */
+#navigationMenu p {
+	color: #F8F8FF;
+}
+
+/*Burger icon and "menu" text in button color is ghostwhite*/
+#menuButton {
+	color: #F8F8FF;
+}
+
+/* links are gray when hovered upon */
+#navigationMenu a:hover {
+	color: #808080;
+}
+
+/* menu button is gray when hovered*/
+#menuButton:hover {
+	color: #F8F8FF;
+}
+
+.bodyButtons{
+	font-size: x-large;
+	text-align: center;
+	/* font color */
+	color: #333333;
+	
+	border-style: solid;
+	border-color: #333333;
+}
+
+/* Center all of the content on the screen */
+#bodyContent {
+    text-align: center;
+}
+
+/* Center the application logo */
+#logo {
+	display: block;
+	margin: 0 auto;
+	height: 100px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
