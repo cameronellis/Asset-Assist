@@ -54,3 +54,8 @@
 	margin: 0 auto;
 	height: 100px;
 }
+
+/* message to scroll for options is red */
+#scrollMessage {
+    color: red;
+}
