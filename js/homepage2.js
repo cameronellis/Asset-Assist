@@ -19,7 +19,7 @@ $(document).ready(function(){
 	}	
 	$("#totalValue").text("Total value of all assets: $" + assetsSum);
 
-	$("#viewAllAssetsButton").click(function(){
+	$(".viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
 		window.location = "../html/searchResults.html";
 	});
