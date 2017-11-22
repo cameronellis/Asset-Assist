@@ -47,9 +47,11 @@
 	text-align: center;
 	/* font color */
 	color: #333333;
+	font-size: small;
 
 	border-style: solid;
 	border-color: #333333;
+	padding: 5% 0;
 }
 
 /* Center all of the content on the screen */
