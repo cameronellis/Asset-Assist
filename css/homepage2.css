@@ -33,12 +33,21 @@
 	color: #F8F8FF;
 }
 
-.bodyButtons{
+.desktopBodyButtons {
 	font-size: x-large;
 	text-align: center;
 	/* font color */
 	color: #333333;
 	
+	border-style: solid;
+	border-color: #333333;
+}
+
+.mobileBodyButtons {
+	text-align: center;
+	/* font color */
+	color: #333333;
+
 	border-style: solid;
 	border-color: #333333;
 }
@@ -58,4 +67,6 @@
 /**/
 #footerNavBar {
 	margin: 5px;
+	text-align: center;
+	font-size: small;
 }
