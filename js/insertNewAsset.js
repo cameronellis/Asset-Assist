@@ -48,8 +48,7 @@ $(document).ready(function(){
 		let itemMiscNotesField = $("#itemMiscNotesField").val();
 
 		// check if all mandatory forms are filled in...
-		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== "" 
-			&& itemPictureField !== undefined){
+		if(itemNameField !== "" && itemPriceField !== "" && itemYearField !== ""){
 			
 			// retrieve users's list of assets from localStorage
 			let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
@@ -142,20 +141,6 @@ $(document).ready(function(){
 				// Remove the error message from the page
 				$("#yearValueError").attr("class","");
 				$("#yearValueError").html("");
-			}
-
-			// if a picture of the item is not given
-			if(itemPictureField === undefined){
-				// give input box a red border
-				$('#itemPictureSection').attr("class","has-error");
-				
-				// Error message
-				$("#pictureOfItemError").attr("class","alert alert-danger");
-				$('#pictureOfItemError').html("<strong><span class='icon glyphicon glyphicon-remove-circle'></span>Error:</strong> Please provide a picture of the asset");
-			}
-			else{
-				// give input box a green border
-				$('#itemPictureSection').addClass("has-success");
 			}
 
 			$("#submissionErrorMessage").addClass("alert alert-danger");
