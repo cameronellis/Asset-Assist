@@ -41,4 +41,17 @@ $(document).ready(function(){
 
 	$("#itemMiscDetails").text(assetToDisplay.itemMiscNotes);
 
+	let assetDetailsDisplayed = false;
+
+	$("#assetDetailsButton").click(function(){
+		if(assetDetailsDisplayed){
+			$("#assetDetailsButton").html("<span class='icon glyphicon glyphicon-chevron-down'></span>Click here to show Asset Details");
+			assetDetailsDisplayed = false;			
+		}
+		else{
+			$("#assetDetailsButton").html("<span class='icon glyphicon glyphicon-chevron-up'></span>Click here to hide Asset Details");
+			assetDetailsDisplayed = true;
+		}
+	});
+
 });
