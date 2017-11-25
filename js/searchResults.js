@@ -18,7 +18,7 @@ $(document).ready(function(){
                 "</td>" +
                   "<td><h4>" + itemName + "</h4></td>" +
                 "<td>" +
-                    "<a class='buttonText btn btn-warning' onclick='setIndexToDisplay(" + i + ")'>Item Details</a>" +
+                    "<a class='buttonText btn btn-warning' onclick='setIndexToDisplay(" + i + ")'>Asset Details</a>" +
                 "</td>" +
             "</tr>"
         );
