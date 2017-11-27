@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+		localStorage.setItem("bottomNavBar", "true");
+		
+		// lines below render page.html
+		$.get("page.html", function (data) {
+			document.open();
+			document.write(data);
+			document.close();
+			$.cache = {};
+		}, "text");
+	</script>
+</head>
+</html>
