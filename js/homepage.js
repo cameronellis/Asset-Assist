@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$("#searchForAssetButton").click(function(){
 		console.log("search for asset button clicked")
 		tracker = ga.getAll()[0];
-		tracker.send('event', 'button', 'click');
+		tracker.send('event', 'searchButton', 'click');
 		window.location = "searchForItem.html";
 	});
 });
