@@ -14,12 +14,13 @@ $(document).ready(function(){
 	
 	$("#viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
+		window.location = "../html/searchResults.html";
+	});
 
-		console.log("view all assets button clicked");
-		// tracker code here
+	$("#searchForAssetButton").click(function(){
+		console.log("search for asset button clicked")
 		tracker = ga.getAll()[0];
 		tracker.send('event', 'like', 'click');
-		
-		window.location = "../html/searchResults.html";
+		window.location = "searchForItem.html";
 	});
 });
