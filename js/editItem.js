@@ -54,8 +54,14 @@ $(document).ready(function(){
       // update the asset with the new information
       usersAssets[indexToDisplay] = newAssetField;
 
+      // user successfully able to edit the asset
       try{
+        // show notification at the top of the itemDetails.html that the asset was updated
+        localStorage.setItem("showAssetEditedConfirmationNotification","true");
+
+        // update asset list for the user
         localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
+        
         // go to item information page
         window.location = "../html/itemDetails.html";
       }
