@@ -26,7 +26,6 @@ $(document).ready(function(){
 });
 
 function deleteAsset(){
-	localStorage.setItem("showAssetDeletedAlert", "true");
 	// Delete this item from user's assets
 	usersAssets.splice(indexToDisplay,1);
 	// Update this user's assset list in localStorage
