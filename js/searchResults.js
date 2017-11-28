@@ -1,12 +1,10 @@
-
 $(document).ready(function(){
     let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
     let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
     let searchType = localStorage.getItem("searchType");
-
-    // show who is logged in
     let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
-    $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
+    let showAssetDeletedAlert = localStorage.getItem("showAssetDeletedAlert")
+
 
     function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
@@ -23,6 +21,14 @@ $(document).ready(function(){
             "</tr>"
         );
     }
+
+    if(showAssetDeletedAlert === "true"){
+        $("#assetDeletedAlert").attr("class","alert alert-danger");
+        $("#assetDeletedAlert").html("<strong>Success!</strong> Asset deleted");
+    }
+
+    // show who is logged in
+    $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
     if(searchType === "basic"){
         let searchQuery = localStorage.getItem("searchQuery");
@@ -150,9 +156,8 @@ $(document).ready(function(){
 // When the user clicks on an image, this function determines what data to
 // display on the next page
 function setIndexToDisplay(i){
-    // when the user goes to itemDetails.html, do not show message saying 
-    // that the item has been successfully edited
     localStorage.setItem("showAssetEditedAlert","false");
+    localStorage.setItem("showAssetDeletedAlert", "false");
 
     localStorage.setItem("indexToDisplay", i);
     window.location = "../html/itemDetails.html";
