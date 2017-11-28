@@ -2,7 +2,7 @@ let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
 let indexToDisplay = localStorage.getItem("indexToDisplay");
 let usersAssets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
 let dataToDisplay = usersAssets[indexToDisplay];
-let showAssetEditedConfirmationNotification = localStorage.getItem("showAssetEditedConfirmationNotification");
+let showAssetEditedAlert = localStorage.getItem("showAssetEditedAlert");
 
 $(document).ready(function(){
 	// show who is logged in
@@ -19,9 +19,9 @@ $(document).ready(function(){
 	$("#itemImage").attr("src", dataToDisplay.itemPicture);
 	$("#itemReceipt").attr("src", dataToDisplay.itemReceipt);
 
-	if(showAssetEditedConfirmationNotification === "true"){
-		$("#assetEditedConfirmationAlert").attr("class","alert alert-info");
-		$("#assetEditedConfirmationAlert").html("<strong>Success!</strong> Asset details edited");
+	if(showAssetEditedAlert === "true"){
+		$("#assetEditedAlert").attr("class","alert alert-info");
+		$("#assetEditedAlert").html("<strong>Success!</strong> Asset details edited");
 	}
 });
 
