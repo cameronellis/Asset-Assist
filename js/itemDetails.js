@@ -20,7 +20,6 @@ $(document).ready(function(){
 });
 
 function deleteAsset(){
-	console.log("Item deleted button");
 	// Delete this item from user's assets
 	usersAssets.splice(indexToDisplay,1);
 	// Update this user's assset list in localStorage

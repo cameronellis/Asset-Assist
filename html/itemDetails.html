@@ -75,24 +75,47 @@
     <br></br>
     <div class="row">
       <div class="col-sm-4">
-        <a href="searchResults.html" id="backButton" class="bodyButtons btn-lg btn-block btn-warning"><span class="icon glyphicon glyphicon-chevron-left"></span><br>
+        <a href="searchResults.html" class="navigationButtons bodyButtons btn-lg btn-block btn-warning"><span class="icon glyphicon glyphicon-chevron-left"></span><br>
           Go Back
         </a>
         <br></br>
       </div>
+
       <div class="col-sm-4">
         <a href="editItem.html" class="bodyButtons btn-lg btn-block btn-primary"><span class="icon glyphicon glyphicon-pencil"></span><br>
           Edit Asset
         </a>
         <br></br>    
       </div>
+
       <div class="col-sm-4">
-        <a onclick="deleteAsset()" class="bodyButtons btn-lg btn-block btn-danger"><span class="icon glyphicon glyphicon-trash"></span><br>
+        <a class="bodyButtons btn-lg btn-block btn-danger" data-toggle="modal" data-target="#myModal"><span class="icon glyphicon glyphicon-trash"></span><br>
           Delete Asset
         </a>
+
         <br></br>    
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Delete this Asset?</h2>
+          </div>
+          <div class="modal-body">
+            <a onclick="deleteAsset()" class="bodyButtons btn-lg btn-block btn-danger"><span class="icon glyphicon glyphicon-trash"></span><br>Yes, delete this asset</a>
+            <a class="navigationButtons bodyButtons btn-lg btn-block btn-warning" data-dismiss="modal"><span class="icon glyphicon glyphicon-chevron-left"></span><br>No, don't delete</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
   </div>
 
   <script src="../js/itemDetails.js"></script>
