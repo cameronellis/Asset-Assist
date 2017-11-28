@@ -25,5 +25,5 @@ function deleteAsset(){
 	// Update this user's assset list in localStorage
 	localStorage.setItem(currentlyLoggedInAs + "_assets", JSON.stringify(usersAssets));
 	// navigate back to asset search page
-	window.location = "../html/searchForItem.html";
+	window.location = "../html/searchResults.html";
 }
