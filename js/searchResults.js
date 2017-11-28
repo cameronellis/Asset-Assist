@@ -152,7 +152,6 @@ $(document).ready(function(){
 function setIndexToDisplay(i){
     // when the user goes to itemDetails.html, do not show message saying 
     // that the item has been successfully edited
-    console.log("Does this run?");
     localStorage.setItem("showAssetEditedAlert","false");
 
     localStorage.setItem("indexToDisplay", i);
