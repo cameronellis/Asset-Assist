@@ -25,6 +25,8 @@
 #changeAssetDetailsButton {
 	font-size: x-large;
 	text-align: center;
+    border-style: solid;
+    border-color: #333333;	
 }
 
 /* navigationMenu text is set to ghost white*/
