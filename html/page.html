@@ -59,22 +59,24 @@
         <img id="logo" src="../img/logo.png"></img>
         <h1><span class="icon glyphicon glyphicon-home"></span>Home</h1>
     </div>
-	<h2 id="usersFirstName"></h2>
-	
-	<div>
-		<h3 id="numOfAssetsSection"></h3>
-	</div>
-	
+    <h2 id="usersFirstName"></h2>
+    
+    <div>
+        <h3 id="numOfAssetsSection"></h3>
+    </div>
+
+    <p>Hello world</p>
+    <p>My favorite color is pink</p>
+    
     <br></br>
     
     <script id="entry-template" type="text/x-handlebars-template">
-        {{#if bottomNavBar}}
-            <h2>bottomNavBar is TRUE!!! BUTTCHEEKS</h2>
+        {{#if grid}}
+            <h2>bottomNavBar is TRUE</h2>
         {{else}}
-            <h2>bottomNavBar is FALSE!!!</h2>
+            <h2>bottomNavBar is FALSE</h2>
         {{/if}}
     </script>
-
 
     <br></br>
     <div class="row">
@@ -117,6 +119,7 @@
 
 </div>
 
+<script src="../js/handlebars-v4.0.11.js"></script>
 <script src="../js/homepage.js"></script>
 
 </body>

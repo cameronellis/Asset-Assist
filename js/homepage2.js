@@ -16,4 +16,11 @@ $(document).ready(function(){
 		localStorage.setItem("searchQuery","");
 		window.location = "../html/searchResults.html";
 	});
+
+	$("#searchForAssetButton").click(function(){
+		console.log("search for asset button clicked")
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'searchButton', 'click');
+		window.location = "searchForItem.html";
+	});
 });
