@@ -22,11 +22,11 @@ $(document).ready(function(){
 	$("#firstName").val(userData.fName);
 	$("#lastName").val(userData.lName);
 	$("#email").val(userData.email);
- 
-    // When user clicks outside the navigation menu, close it
-    $(document).click(function clickOutSideMenuToClose(event) {
-        if (!$(event.target).is("a")) {
-            $(".collapse").collapse("hide");
-        }
-    });
+});
+
+// When user clicks outside the navigation menu, close it
+$(document).click(function clickOutSideMenuToClose(event) {
+    if (!$(event.target).is("a")) {
+        $(".collapse").collapse("hide");
+    }
 });
