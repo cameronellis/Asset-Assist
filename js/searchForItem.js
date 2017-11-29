@@ -15,6 +15,7 @@ $(document).ready(function(){
   }
 
   $("#viewAllAssetsButton").click(function(){
+    localStorage.setItem("showAssetDeletedAlert","false");
     localStorage.setItem("searchQuery","");
     window.location = "../html/searchResults.html";
   });
@@ -24,6 +25,11 @@ $(document).ready(function(){
 
   // When the search button is clicked
   $("#searchButton").click(executeBasicSearch);
+
+  $("#advancedSearchButton").click(function(){
+    localStorage.setItem("showAssetDeletedAlert","false");
+    window.location = "../html/advancedSearch.html";
+  });
 });
 
 function updateRecentSearches(searchName){
@@ -56,6 +62,7 @@ function executeBasicSearch(){
 
   // Check if search box is filled
   if(searchName !== ""){
+    localStorage.setItem("showAssetDeletedAlert","false");
     // Update recent searches
     updateRecentSearches(searchName);
     // set search query term here
@@ -74,7 +81,9 @@ function executeBasicSearch(){
   }
 }
 
+// When a link under "Your Recent Searches" has been clicked
 function recentSearchValueIndex(searchIndex){
+  localStorage.setItem("showAssetDeletedAlert","false");
   // set searchQuery to recent search list item
   localStorage.setItem("searchQuery", recentSearches[searchIndex]);
   // set search type to basic

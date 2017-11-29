@@ -14,6 +14,7 @@ $(document).ready(function(){
 
 	$(".viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
+		localStorage.setItem("showAssetDeletedAlert","false");
 		window.location = "../html/searchResults.html";
 	});
 

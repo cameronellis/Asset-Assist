@@ -3,9 +3,10 @@ $(document).ready(function(){
     let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
     let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
     let searchType = localStorage.getItem("searchType");
-
+    let showAssetDeletedAlert = localStorage.getItem("showAssetDeletedAlert");
     // show who is logged in
     let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
+
     $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
     function appendToHTMLTable(itemName, itemPicture, i){
@@ -22,6 +23,11 @@ $(document).ready(function(){
                 "</td>" +
             "</tr>"
         );
+    }
+
+    if(showAssetDeletedAlert === "true"){
+        $("#assetDeletedAlert").attr("class","alert alert-danger");
+        $("#assetDeletedAlert").html("<strong>Sucess!</strong> Asset has been deleted");
     }
 
     if(searchType === "basic"){
