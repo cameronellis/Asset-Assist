@@ -33,13 +33,36 @@ $(document).ready(function(){
 	$("#itemName").text(assetToDisplay.itemName);
 	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
 	$("#itemYear").text(assetToDisplay.itemYear);
-	$("#itemManufacturer").text(assetToDisplay.itemManufacturer);
-	// item image
-	$("#itemPicture").attr("src", assetToDisplay.itemPicture);
-	// item receipt
-	$("#itemReceipt").attr("src", assetToDisplay.itemReceipt);
 
-	$("#itemMiscDetails").text(assetToDisplay.itemMiscNotes);
+	if(assetToDisplay.itemManufacturer !== ""){
+		$("#itemManufacturer").text(assetToDisplay.itemManufacturer);		
+	}
+	else{
+		$("#itemManufacturer").text("(No Manufacturer Given)");
+	}
+
+	// item image
+	if(assetToDisplay.itemPicture !== undefined){
+		$("#itemPicture").attr("src", assetToDisplay.itemPicture);
+	}
+	else{
+		$("#itemPictureErrorMessage").html("<h4>(No picture given)</h4>");
+	}
+
+	// item receipt
+	if(assetToDisplay.itemReceipt !== undefined){
+		$("#itemReceipt").attr("src", assetToDisplay.itemReceipt);
+	}
+	else{
+		$("#itemReceiptErrorMessage").html("<h4>(No receipt given)</h4>");
+	}
+
+	if(assetToDisplay.itemMiscNotes !== ""){
+		$("#itemMiscDetails").text(assetToDisplay.itemMiscNotes);
+	}
+	else{
+		$("#itemMiscDetails").html("(No Miscellaneous Notes Given)");	
+	}
 
 	let assetDetailsDisplayed = false;
 
