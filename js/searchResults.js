@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     if(showAssetDeletedAlert === "true"){
         $("#assetDeletedAlert").attr("class","alert alert-danger");
-        $("#assetDeletedAlert").html("<strong>Sucess!</strong> Asset has been deleted");
+        $("#assetDeletedAlert").html("<strong>Success!</strong> Asset has been deleted");
     }
 
     if(searchType === "basic" || searchType === "viewAllAssets"){
