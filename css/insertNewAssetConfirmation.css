@@ -7,8 +7,9 @@ button.accordion {
     border-color: #333333;
 }
 
-button.accordion.active, button.accordion:hover {
-    /*background-color: #ccc;*/
+/* When 'Click here to show Asset Details' or 'Click here to hide Asset Deatils' is clicked */
+#assetDetailsButton {
+    color: #333333;    
 }
 
 div.panel {
