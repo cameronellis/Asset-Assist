@@ -36,6 +36,13 @@ $(document).ready(function(){
 	let currentlyLoggedInAs = localStorage.getItem("currentlyLoggedInAs");
 	let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
+ 
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
 	
 	// When the submit button is clicked
 	$("#submitButton").click(function(){

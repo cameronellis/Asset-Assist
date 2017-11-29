@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 	// displays number of assets saved to account
 	$("#numOfAssetsSection").text("Total assets saved: " + numOfAssets);
-	
+                  
 	$("#viewAllAssetsButton").click(function(){
 		localStorage.setItem("searchQuery","");
 		localStorage.setItem("showAssetDeletedAlert","false");
@@ -24,4 +24,11 @@ $(document).ready(function(){
 		tracker.send('event', 'searchButton', 'click');
 		window.location = "searchForItem.html";
 	});
+ 
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
 });
