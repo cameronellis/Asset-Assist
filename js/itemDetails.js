@@ -14,10 +14,34 @@ $(document).ready(function(){
 	$("#itemName").text(dataToDisplay.itemName);
 	$("#itemPrice").text("$" + dataToDisplay.itemPrice);
 	$("#itemYear").text(dataToDisplay.itemYear);
-	$("#itemManufacturer").text(dataToDisplay.itemManufacturer);
-	$("#itemMiscNotes").text(dataToDisplay.itemMiscNotes);
-	$("#itemImage").attr("src", dataToDisplay.itemPicture);
-	$("#itemReceipt").attr("src", dataToDisplay.itemReceipt);
+
+	if(dataToDisplay.itemManufacturer !== ""){
+		$("#itemManufacturer").text(dataToDisplay.itemManufacturer);
+	}
+	else{
+		$("#itemManufacturer").text("(No manufacturer given)");	
+	}
+	
+	if(dataToDisplay.itemMiscNotes !== ""){
+		$("#itemMiscNotes").text(dataToDisplay.itemMiscNotes);
+	}
+	else{
+		$("#itemMiscNotes").text("(No miscellaneous notes given)");	
+	}
+
+	if(dataToDisplay.itemPicture !== undefined || dataToDisplay.itemPicture !== ""){
+		$("#itemImage").attr("src", dataToDisplay.itemPicture);
+	}
+	else{
+		$("#itemImageErrorMessage").html("<h4>(No picture given)</h4>");	
+	}
+
+	if(dataToDisplay.itemReceipt !== undefined){
+		$("#itemReceipt").attr("src", dataToDisplay.itemReceipt);
+	}
+	else{
+		$("#itemReceiptErrorMessage").html("<h4>(No Receipt Given)</h4>");
+	}
 
 	if(showAssetEditedAlert === "true"){
 		$("#assetEditedAlert").attr("class","alert alert-info");
