@@ -50,10 +50,18 @@
 
 .buttonText {
 	text-align: center;
-	font-size: x-large;
+	font-size: large;
 	color: #333333;
 	border-color: #333333;
 	border: solid;
+}
+
+#goToSearch {
+	text-align: center;
+	font-size: x-large;
+	color: #333333;
+	border-color: #333333;
+	border: solid;	
 }
 
 /* Output table */
