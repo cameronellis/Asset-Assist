@@ -14,7 +14,7 @@ $(document).ready(function(){
                         "<img src='" + itemPicture + "' width='100' height='100' alt='Item image' class='img-thumbnail'/>" +
                     "</a>" +
                 "</td>" +
-                  "<td><h4>" + itemName + "</h4></td>" +
+                  "<td><h4><strong>" + itemName + "</strong></h4></td>" +
                 "<td>" +
                     "<a class='buttonText btn btn-warning' onclick='setIndexToDisplay(" + i + ")'>Asset Details</a>" +
                 "</td>" +
@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     if(showAssetDeletedAlert === "true"){
         $("#assetDeletedAlert").attr("class","alert alert-danger");
-        $("#assetDeletedAlert").html("<strong>Sucess!</strong> Asset has been deleted");
+        $("#assetDeletedAlert").html("<strong>Success!</strong> Asset has been deleted");
     }
 
     if(searchType === "basic" || searchType === "viewAllAssets"){
