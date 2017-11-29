@@ -49,3 +49,9 @@
 #bodyContent {
     text-align: center;
 }
+
+img {
+	height: 200px;
+	display: block;
+	margin: 10px auto;
+}
