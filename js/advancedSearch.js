@@ -15,13 +15,6 @@ $(document).ready(function() {
   let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
   $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
                   
-    // When user clicks outside the navigation menu, close it
-    $(document).click(function clickOutSideMenuToClose(event) {
-        if (!$(event.target).is("a")) {
-            $(".collapse").collapse("hide");
-        }
-    });
-
   // When the search button is clicked
   $("#searchButton").click(function() {
     let assetName = $("#assetName").val();
@@ -38,4 +31,11 @@ $(document).ready(function() {
     // set search type to advanced
     localStorage.setItem("searchType", "advanced");
   });
+});
+
+// When user clicks outside the navigation menu, close it
+$(document).click(function clickOutSideMenuToClose(event) {
+    if (!$(event.target).is("a")) {
+        $(".collapse").collapse("hide");
+    }
 });

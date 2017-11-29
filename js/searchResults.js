@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     if(showAssetDeletedAlert === "true"){
         $("#assetDeletedAlert").attr("class","alert alert-danger");
-        $("#assetDeletedAlert").html("<strong>Success!</strong> Asset has been deleted");
+        $("#assetDeletedAlert").html("<strong>Sucess!</strong> Asset has been deleted");
     }
 
     if(searchType === "basic" || searchType === "viewAllAssets"){
@@ -173,13 +173,6 @@ $(document).ready(function(){
             $("#errorMessage").text("Your search criteria did not match any assets");
         }
     }
-    
-    // When user clicks outside the navigation menu, close it
-    $(document).click(function clickOutSideMenuToClose(event) {
-        if (!$(event.target).is("a")) {
-            $(".collapse").collapse("hide");
-        }
-    });
 });
 
 // When the user clicks on an image, this function determines what data to
@@ -193,3 +186,10 @@ function setIndexToDisplay(i){
     localStorage.setItem("indexToDisplay", i);
     window.location = "../html/itemDetails.html";
 }
+
+// When user clicks outside the navigation menu, close it
+$(document).click(function clickOutSideMenuToClose(event) {
+    if (!$(event.target).is("a")) {
+        $(".collapse").collapse("hide");
+    }
+});

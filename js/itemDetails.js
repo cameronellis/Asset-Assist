@@ -48,12 +48,6 @@ $(document).ready(function(){
 		$("#assetEditedAlert").html("<strong>Success!</strong> Asset details edited");
 	}
  
-    // When user clicks outside the navigation menu, close it
-    $(document).click(function clickOutSideMenuToClose(event) {
-        if (!$(event.target).is("a")) {
-            $(".collapse").collapse("hide");
-        }
-    });
 });
 
 function deleteAsset(){
@@ -65,3 +59,10 @@ function deleteAsset(){
 	// navigate back to asset search page
 	window.location = "../html/searchResults.html";
 }
+
+// When user clicks outside the navigation menu, close it
+$(document).click(function clickOutSideMenuToClose(event) {
+    if (!$(event.target).is("a")) {
+        $(".collapse").collapse("hide");
+    }
+});
