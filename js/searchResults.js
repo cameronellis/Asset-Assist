@@ -4,10 +4,7 @@ $(document).ready(function(){
     let users_assets = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_assets"));
     let searchType = localStorage.getItem("searchType");
     let showAssetDeletedAlert = localStorage.getItem("showAssetDeletedAlert");
-    // show who is logged in
     let userData = JSON.parse(localStorage.getItem(currentlyLoggedInAs + "_userdata"));
-
-    $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
     function appendToHTMLTable(itemName, itemPicture, i){
         $("#table_body_content").append(
@@ -24,6 +21,17 @@ $(document).ready(function(){
             "</tr>"
         );
     }
+
+    $("#goToSearch").click(function(){
+        localStorage.setItem("showAssetDeletedAlert","false");
+    });
+
+    $(".navigationMenuLink").click(function(){
+        localStorage.setItem("showAssetDeletedAlert","false");
+    });
+
+    // show who is logged in
+    $("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
     if(showAssetDeletedAlert === "true"){
         $("#assetDeletedAlert").attr("class","alert alert-danger");
@@ -180,6 +188,7 @@ function setIndexToDisplay(i){
     // when the user goes to itemDetails.html, do not show message saying 
     // that the item has been successfully edited
     localStorage.setItem("showAssetEditedAlert","false");
+    localStorage.setItem("showAssetDeletedAlert","false");
 
     localStorage.setItem("indexToDisplay", i);
     window.location = "../html/itemDetails.html";
