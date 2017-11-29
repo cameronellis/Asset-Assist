@@ -30,7 +30,7 @@ $(document).ready(function(){
         $("#assetDeletedAlert").html("<strong>Sucess!</strong> Asset has been deleted");
     }
 
-    if(searchType === "basic"){
+    if(searchType === "basic" || searchType === "viewAllAssets"){
         let searchQuery = localStorage.getItem("searchQuery");
         let searchQueryToLowerCase = searchQuery.toLowerCase();
         let searchResultCount = 0;
@@ -48,7 +48,21 @@ $(document).ready(function(){
 
         // if there are no assets to display
         if(searchResultCount === 0){
-            $("#errorMessage").text("Your search for \"" + searchQuery + "\" did not match any assets");
+            if(searchType === "basic"){
+                $("#errorMessage").text("Your search for \"" + searchQuery + "\" did not match any assets");
+            }
+            else if(searchType === "viewAllAssets"){
+                $("#errorMessage").html("<h2>Sorry, but there are no assets to display</h2>" + 
+                    "<br>" + 
+                    "But you can insert an asset" + 
+                    "<br></br>" + 
+                    "<a class='buttonText btn-lg btn-block btn-warning'>" + 
+                        "<span class='icon glyphicon glyphicon-plus'></span>" + 
+                        "<br>" + 
+                        "Insert New Asset" + 
+                    "</a>"                   
+                );
+            }
         }
     }
 

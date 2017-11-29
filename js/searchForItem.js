@@ -7,6 +7,8 @@ $(document).ready(function(){
   $("#viewAllAssetsButton").click(function(){
     localStorage.setItem("showAssetDeletedAlert","false");
     localStorage.setItem("searchQuery","");
+    localStorage.setItem("searchType","viewAllAssets");
+
     window.location = "../html/searchResults.html";
   });
 
