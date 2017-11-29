@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$("#usersFullName").text("Logged in as: " + userData.fName + " " + userData.lName);
 
 	$("#itemName").text(dataToDisplay.itemName);
-	$("#itemPrice").text("$" + dataToDisplay.itemPrice);
+	$("#itemPrice").text(dataToDisplay.itemPrice);
 	$("#itemYear").text(dataToDisplay.itemYear);
 
 	if(dataToDisplay.itemManufacturer !== ""){

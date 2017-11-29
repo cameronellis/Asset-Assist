@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 	// Display content in its respective place in the page
 	$("#itemName").text(assetToDisplay.itemName);
-	$("#itemPrice").text("$ " + assetToDisplay.itemPrice);
+	$("#itemPrice").text(assetToDisplay.itemPrice);
 	$("#itemYear").text(assetToDisplay.itemYear);
 
 	if(assetToDisplay.itemManufacturer !== ""){
