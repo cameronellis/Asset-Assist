@@ -64,6 +64,13 @@ $(document).ready(function(){
 		$("#itemMiscDetails").html("(No Miscellaneous Notes Given)");	
 	}
 
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
+
 	let assetDetailsDisplayed = false;
 
 	$("#assetDetailsButton").click(function(){

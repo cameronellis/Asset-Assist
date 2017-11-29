@@ -165,6 +165,13 @@ $(document).ready(function(){
             $("#errorMessage").text("Your search criteria did not match any assets");
         }
     }
+    
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
 });
 
 // When the user clicks on an image, this function determines what data to

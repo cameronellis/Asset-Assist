@@ -22,6 +22,13 @@ $(document).ready(function(){
     localStorage.setItem("showAssetDeletedAlert","false");
     window.location = "../html/advancedSearch.html";
   });
+  
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
 });
 
 function executeBasicSearch(){

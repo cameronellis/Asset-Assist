@@ -25,4 +25,11 @@ $(document).ready(function(){
 		tracker.send('event', 'searchButton', 'click');
 		window.location = "searchForItem.html";
 	});
+ 
+    // When user clicks outside the navigation menu, close it
+    $(document).click(function clickOutSideMenuToClose(event) {
+        if (!$(event.target).is("a")) {
+            $(".collapse").collapse("hide");
+        }
+    });
 });
