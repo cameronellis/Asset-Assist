@@ -9,7 +9,8 @@ button.accordion {
 
 /* When 'Click here to show Asset Details' or 'Click here to hide Asset Deatils' is clicked */
 #assetDetailsButton {
-    color: #333333;    
+    color: #333333;  
+    border-width: 3px;
 }
 
 div.panel {
