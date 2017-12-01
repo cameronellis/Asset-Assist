@@ -22,7 +22,7 @@
 	font-size: large;
 }
 
-#changeAssetDetailsButton {
+.pageButton {
 	font-size: x-large;
 	text-align: center;
     border-style: solid;
@@ -59,9 +59,9 @@
 }
 
 img{
-	height: 200px;
-	display: block;
-	margin: 10px auto;
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
 }
 
 /* Set error messages font to 18px */
@@ -80,4 +80,3 @@ img{
 #submissionErrorMessage {
 	font-size: 18px;
 }
-

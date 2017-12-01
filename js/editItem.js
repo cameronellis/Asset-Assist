@@ -26,8 +26,37 @@ $(document).ready(function(){
 
   // Pre-populate fields
 	$("#itemNameField").attr("value", dataToDisplay.itemName);
-  $("#itemImage").attr("src", dataToDisplay.itemPicture);
-  $("#itemReceipt").attr("src", dataToDisplay.itemReceipt);
+  
+  // Asset picture
+  // on page load, if no picture to display, then don't display the delete asset photo button
+  if(dataToDisplay.itemPicture === "" || dataToDisplay.itemPicture === undefined){
+    $("#deleteAssetPhoto").hide();
+  }
+  else{
+    $("#itemImage").attr("src", dataToDisplay.itemPicture);
+    $("#deleteAssetPhoto").show();
+  }
+
+  // When the user wants to delete an asset's photo
+  $("#deleteAssetPhoto").click(function(){
+    $("#itemImage").attr("src", "");
+    $("#deleteAssetPhoto").hide(); 
+  });
+
+  // when the user wants to add an asset's photo
+  $("#itemImageInput").click(function(){
+    console.log("Adding an asset photo, show the delete Asset photo button now");
+    $("#deleteAssetPhoto").show();
+  });
+
+  if(dataToDisplay.itemReceipt === ""){
+    $("#deleteAssetReceipt").hide();
+  }
+  else{
+    $("#itemReceipt").attr("src", dataToDisplay.itemReceipt);    
+    $("#deleteAssetReceipt").show();
+  }
+
 	$("#itemPriceField").attr("value", dataToDisplay.itemPrice);
   $("#itemManufacturerField").attr("value", dataToDisplay.itemManufacturer);
   $("#itemMiscNotesField").text(dataToDisplay.itemMiscNotes);

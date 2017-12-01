@@ -61,11 +61,12 @@
     
     <h2>Picture of Asset</h2>
     <div id="itemImageSection">
-        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemImageInput" onchange="swapOutImage('itemImageInput', 'itemImage')"></input>
-        <img id="itemImage" height="200" alt="Item image goes here" class="img" />
-        <div class="alert alert-warning">
-          <strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
-        </div>
+      <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemImageInput" onchange="swapOutImage('itemImageInput', 'itemImage')"></input>
+      <img id="itemImage" class="img" />
+      <a id="deleteAssetPhoto" class="btn-lg btn-block btn-danger pageButton">Delete Asset Photo</a>
+      <div class="alert alert-warning">
+        <strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
+      </div>
     </div>
 
     <div id="assetPriceSection">      
@@ -87,11 +88,12 @@
 
     <h2>Picture of Asset's Receipt</h2>
     <div class="itemReceiptSection">
-        <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptInput" onchange="swapOutImage('itemReceiptInput', 'itemReceipt')"></input>
-        <img id="itemReceipt" height="200" alt="Receipt image goes here" class="img" />
-        <div class="alert alert-warning">
-          <strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
-        </div>
+      <input type="file" class="form-control input-lg" name="pic" accept="image/*" id="itemReceiptInput" onchange="swapOutImage('itemReceiptInput', 'itemReceipt')"></input>
+      <img id="itemReceipt" class="img" />
+      <a id="deleteAssetReceipt" class="btn-lg btn-block btn-danger pageButton">Delete Asset Receipt</a>
+      <div class="alert alert-warning">
+        <strong><span class="icon glyphicon glyphicon-exclamation-sign"></span>Warning!</strong> Please only upload a small photo. This app is still a prototype.
+      </div>
     </div>
 
     <h2>Misc. Notes</h2>
@@ -100,7 +102,7 @@
     </form>
 
     <br><br>
-    <a id="changeAssetDetailsButton" class="btn-lg btn-block btn-primary"><span class="icon glyphicon glyphicon-pencil"></span><br>Submit</a>
+    <a id="changeAssetDetailsButton" class="pageButton btn-lg btn-block btn-primary"><span class="icon glyphicon glyphicon-pencil"></span><br>Submit</a>
     <br><br>
     <div id="submissionErrorMessage"></div>
 
