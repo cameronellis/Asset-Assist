@@ -45,10 +45,11 @@ $(document).ready(function(){
 
   // when the user wants to add an asset's photo
   $("#itemImageInput").click(function(){
-    console.log("Adding an asset photo, show the delete Asset photo button now");
     $("#deleteAssetPhoto").show();
   });
 
+  // Asset Receipt
+  // on page load, if no receipt to display, the don't display the delete asset receipt button
   if(dataToDisplay.itemReceipt === ""){
     $("#deleteAssetReceipt").hide();
   }
@@ -56,6 +57,18 @@ $(document).ready(function(){
     $("#itemReceipt").attr("src", dataToDisplay.itemReceipt);    
     $("#deleteAssetReceipt").show();
   }
+
+  // when the user want to delete an asset's receipt
+  $("#deleteAssetReceipt").click(function(){
+    $("#itemReceipt").attr("src", "");
+    $("#deleteAssetReceipt").hide();
+  });
+
+  // When the user wants to add an asset's receipt
+  $("#itemReceiptInput").click(function(){
+    console.log("item receipt input button clicked!");
+    $("#deleteAssetReceipt").show();
+  });
 
 	$("#itemPriceField").attr("value", dataToDisplay.itemPrice);
   $("#itemManufacturerField").attr("value", dataToDisplay.itemManufacturer);
