@@ -47,10 +47,3 @@
 #bodyContent {
     text-align: center;
 }
-
-/* Center the application logo */
-#logo {
-	display: block;
-	margin: 0 auto;
-	height: 100px;
-}
