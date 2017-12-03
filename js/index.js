@@ -94,7 +94,7 @@ function authenticateUser(){
 						},
 						{
 							itemName:"Black Couch", itemPrice:"1500", itemYear:"1994",
-							itemPicture:"https://goo.gl/qqpXRp", itemReceipt:"https://goo.gl/3hZ1QU",
+							itemPicture:"https://goo.gl/3aunJg", itemReceipt:"https://goo.gl/3hZ1QU",
 							itemManufacturer:"Wal-Mart", itemMiscNotes:"This was a wedding gift"
 						}
 					];
