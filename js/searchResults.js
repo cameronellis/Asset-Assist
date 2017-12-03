@@ -64,7 +64,7 @@ $(document).ready(function(){
                     "<br>" + 
                     "But you can insert an asset" + 
                     "<br></br>" + 
-                    "<a class='buttonText btn-lg btn-block btn-warning'>" + 
+                    "<a href='insertNewAsset.html' class='buttonText btn-lg btn-block btn-warning'>" + 
                         "<span class='icon glyphicon glyphicon-plus'></span>" + 
                         "<br>" + 
                         "Insert New Asset" + 
